@@ -34,7 +34,6 @@ import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 
-
 enum SleepTime {
 	SHORT(1), MEDIUM(5), LONG(10);
 
@@ -53,13 +52,13 @@ public abstract class TestBase {
 
 	public final int HTTP_OK = 200;
 	public final int HTTP_UNAUTHORIZED = 401;
-	
+
 	@Rule
 	public TestName name = new TestName();
 
 	private DefaultHttpClient httpclient = new DefaultHttpClient();
 
-	private HttpHost proxy = new HttpHost("caproxy.ca.com", 80);
+	private HttpHost proxy;
 	BasicHttpContext localcontext = new BasicHttpContext();
 	UiProperties ourProps;
 	HttpHost targetHost;
@@ -86,21 +85,19 @@ public abstract class TestBase {
 
 	void show(String info) {
 		// TODO logging
-		
-		
-		if( ourProps.getDebugLevel() > 0 ){
+
+		if (ourProps.getDebugLevel() > 0) {
 			System.out.println(info);
 		}
 	}
-	
+
 	void showAlways(String info) {
 		System.out.println(info);
 	}
-	
 
 	static void showStatic(String info) {
 		// TODO logging
-		if( showMe ){
+		if (showMe) {
 			System.out.println(info);
 		}
 	}
@@ -120,12 +117,20 @@ public abstract class TestBase {
 		return sl.getStatusCode();
 	}
 
+	/**
+	 * In general every test should call this method because it cleans up
+	 * (consumes the) call.
+	 * 
+	 * @param response
+	 * @throws IOException
+	 */
 	void showResponse(HttpResponse response) throws IOException {
 		HttpEntity entity = response.getEntity();
 
 		show(response.getStatusLine().toString());
 		if (entity != null) {
-//			System.out.println("Response content length: " + entity.getContentLength());
+			// System.out.println("Response content length: " +
+			// entity.getContentLength());
 			InputStream content = entity.getContent();
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(content));
@@ -139,10 +144,11 @@ public abstract class TestBase {
 
 		show("----------------------------------------");
 
+		// If you don't call this after a http execution you get connection
+		// errors.
 		EntityUtils.consume(entity);
 	}
 
-	
 	void clearHttpUserPass() throws Exception {
 
 		loadProperties();
@@ -152,8 +158,13 @@ public abstract class TestBase {
 		httpclient.getCredentialsProvider().setCredentials(new AuthScope(url, 80),
 				new UsernamePasswordCredentials("UserAnonGuest", "pppppp"));
 	}
-	
 
+	/**
+	 * Called before all test cases that access a web site. Sets up all
+	 * credentials and http globals.
+	 * 
+	 * @throws Exception
+	 */
 	void setupHttp() throws Exception {
 
 		loadProperties();
@@ -162,20 +173,17 @@ public abstract class TestBase {
 		String url = ourProps.getCloudSite();
 		targetHost = new HttpHost(url);
 
-		httpclient.getCredentialsProvider().setCredentials(new AuthScope("caproxy.ca.com", 80),
-				new NTCredentials(ourProps.getProxyUser(), ourProps.getProxyPassword(), "workstation", "tant-a01"));
+		initProxy();
 
 		httpclient.getCredentialsProvider().setCredentials(new AuthScope(url, 80),
 				new UsernamePasswordCredentials(ourProps.getUser(), ourProps.getPassword()));
 
-		// Popup Window to request username/password password
 		// MyAuthenticator ma = new MyAuthenticator();
 		// String userPassword = ma.getPasswordAuthentication();
 		//
 		// // Encode String
 		// String token = new
 		// sun.misc.BASE64Encoder().encode(userPassword.getBytes());
-
 
 		// Create AuthCache instance
 		AuthCache authCache = new BasicAuthCache();
@@ -185,13 +193,6 @@ public abstract class TestBase {
 
 		// Add AuthCache to the execution context
 		localcontext.setAttribute(ClientContext.AUTH_CACHE, authCache);
-
-		List<String> proxyAuthPrefs = new ArrayList<String>();
-		proxyAuthPrefs.add(AuthPolicy.NTLM);
-
-		httpclient.getParams().setParameter(AuthPNames.PROXY_AUTH_PREF, proxyAuthPrefs);
-
-		httpclient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxy);
 
 		// HttpGet httpget = new HttpGet("/");
 
@@ -213,6 +214,24 @@ public abstract class TestBase {
 
 	}
 
+	private void initProxy() {		
+		String proxyName = ourProps.getProxy();
+		int port = ourProps.getProxyPort();
+
+		if( proxyName.length() > 0){
+			httpclient.getCredentialsProvider().setCredentials(new AuthScope(proxyName, port),
+					new NTCredentials(ourProps.getProxyUser(), ourProps.getProxyPassword(), "workstation", "tant-a01"));
+	
+			List<String> proxyAuthPrefs = new ArrayList<String>();
+			proxyAuthPrefs.add(AuthPolicy.NTLM);
+	
+			httpclient.getParams().setParameter(AuthPNames.PROXY_AUTH_PREF, proxyAuthPrefs);
+	
+			proxy = new HttpHost(proxyName, port);
+			httpclient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxy);
+		}
+	}
+
 	void closeHttp() {
 		show("Ending: " + getMethodName());
 
@@ -225,6 +244,7 @@ public abstract class TestBase {
 
 	/**
 	 * Get the authentication token for use with subsequent calls.
+	 * 
 	 * @param code
 	 * @return
 	 * @throws IOException
@@ -238,24 +258,30 @@ public abstract class TestBase {
 
 		HttpResponse response = httpclient.execute(targetHost, httpget, localcontext);
 		String line = getFirstLine(response);
-		
+
 		Assert.assertTrue("Returned status is not OK!", (code == checkStatusCode(response)));
 
 		return line;
 	}
-	
-	void showTestInfo() throws IOException{
+
+	void showTestInfo() throws IOException {
 		loadProperties();
-		
+
 		String url = ourProps.getCloudSite();
 		targetHost = new HttpHost(url);
-		
+
 		showAlways("");
-		showAlways("executing request via proxy: " + proxy);
-		showAlways("to target: " + targetHost);		
+		
+		String proxy = "No Proxy Configured";
+		
+		if( ourProps.getProxy().length() > 0 ){
+			proxy = ourProps.getProxy();
+		}
+		
+		showAlways("executing requests via proxy: " + proxy);
+		showAlways("to target: " + targetHost);
 		showAlways("");
 	}
-	
 
 	String getFirstLine(HttpResponse response) throws IOException {
 		String line = "";
@@ -263,7 +289,8 @@ public abstract class TestBase {
 
 		show(response.getStatusLine().toString());
 		if (entity != null) {
-//			System.out.println("Response content length: " + entity.getContentLength());
+			// System.out.println("Response content length: " +
+			// entity.getContentLength());
 			InputStream content = entity.getContent();
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(content));
@@ -312,24 +339,24 @@ public abstract class TestBase {
 		ourProps = new UiProperties(props);
 	}
 
-	String listProjects(String details ) throws IOException, ClientProtocolException {
+	String listProjects(String details) throws IOException, ClientProtocolException {
 		HttpGet httpget = new HttpGet("/api/1.0/project/" + details);
 		// httpget.setHeader("authToken", token);
 		show("executing request: " + httpget.getRequestLine());
 		HttpResponse response = httpclient.execute(targetHost, httpget, localcontext);
 
 		Assert.assertTrue("Returned status is not OK!", (200 == checkStatusCode(response)));
-		
+
 		return getFirstLine(response);
 	}
 
 	HttpResponse execute(HttpRequestBase http) throws IOException, ClientProtocolException {
-//		String token = getToken();
-		
+		// String token = getToken();
+
 		// http.setHeader("authToken", token);
-		
+
 		show("executing request: " + http.getRequestLine());
-		return( httpclient.execute(targetHost, http, localcontext));
+		return (httpclient.execute(targetHost, http, localcontext));
 	}
 
 }
