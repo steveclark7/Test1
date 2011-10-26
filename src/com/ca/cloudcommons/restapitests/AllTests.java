@@ -9,7 +9,7 @@ import org.junit.runners.Suite;
  * 
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses( { TestRead.class, TestUpload.class })
+@Suite.SuiteClasses( { TestInfo.class, TestRead.class, TestUpload.class })
 public class AllTests {
 
     /**

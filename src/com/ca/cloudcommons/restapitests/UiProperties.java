@@ -36,5 +36,14 @@ public class UiProperties {
 	public  String getProject() {
 		return ourProps.getProperty("Project", "Project");
 	}
+
+	public  int getDebugLevel() {
+		String value = ourProps.getProperty("DebugLevel", "0");
+		
+		int retval = Integer.valueOf(value);
+		
+		return retval;
+	}
+	
 	
 }

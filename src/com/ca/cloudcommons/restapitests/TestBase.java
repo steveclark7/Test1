@@ -63,6 +63,7 @@ public abstract class TestBase {
 	BasicHttpContext localcontext = new BasicHttpContext();
 	UiProperties ourProps;
 	HttpHost targetHost;
+	private static boolean showMe = true;
 
 	// String getPasswordAuthentication() {
 	// String username = UiProperties.getUser();
@@ -75,22 +76,33 @@ public abstract class TestBase {
 		return name.getMethodName();
 	}
 
-	public void startTest() {
-		show("Running: " + getMethodName());
+	private void startTest() {
+		System.out.println("\nRunning: " + getMethodName());
 	}
 
 	public void succeedTest() {
-		show("Succeeded: " + getMethodName());
+		System.out.println("Succeeded: " + getMethodName());
 	}
 
 	void show(String info) {
 		// TODO logging
+		
+		
+		if( ourProps.getDebugLevel() > 0 ){
+			System.out.println(info);
+		}
+	}
+	
+	void showAlways(String info) {
 		System.out.println(info);
 	}
+	
 
 	static void showStatic(String info) {
 		// TODO logging
-		System.out.println(info);
+		if( showMe ){
+			System.out.println(info);
+		}
 	}
 
 	/**
@@ -111,7 +123,7 @@ public abstract class TestBase {
 	void showResponse(HttpResponse response) throws IOException {
 		HttpEntity entity = response.getEntity();
 
-		System.out.println(response.getStatusLine());
+		show(response.getStatusLine().toString());
 		if (entity != null) {
 //			System.out.println("Response content length: " + entity.getContentLength());
 			InputStream content = entity.getContent();
@@ -119,13 +131,13 @@ public abstract class TestBase {
 			BufferedReader in = new BufferedReader(new InputStreamReader(content));
 			String line;
 			while ((line = in.readLine()) != null) {
-				System.out.println(line);
+				show(line);
 			}
 
 			in.close();
 		}
 
-		System.out.println("----------------------------------------");
+		show("----------------------------------------");
 
 		EntityUtils.consume(entity);
 	}
@@ -140,14 +152,15 @@ public abstract class TestBase {
 		httpclient.getCredentialsProvider().setCredentials(new AuthScope(url, 80),
 				new UsernamePasswordCredentials("UserAnonGuest", "pppppp"));
 	}
+	
 
 	void setupHttp() throws Exception {
 
 		loadProperties();
+		startTest();
 
 		String url = ourProps.getCloudSite();
-
-		show("Running: " + getMethodName());
+		targetHost = new HttpHost(url);
 
 		httpclient.getCredentialsProvider().setCredentials(new AuthScope("caproxy.ca.com", 80),
 				new NTCredentials(ourProps.getProxyUser(), ourProps.getProxyPassword(), "workstation", "tant-a01"));
@@ -163,7 +176,6 @@ public abstract class TestBase {
 		// String token = new
 		// sun.misc.BASE64Encoder().encode(userPassword.getBytes());
 
-		targetHost = new HttpHost(url);
 
 		// Create AuthCache instance
 		AuthCache authCache = new BasicAuthCache();
@@ -220,9 +232,9 @@ public abstract class TestBase {
 	String getToken(int code) throws IOException {
 		HttpGet httpget = new HttpGet("/api/1.0/authToken");
 
-		System.out.println("executing request: " + httpget.getRequestLine());
-		System.out.println("via proxy: " + proxy);
-		System.out.println("to target: " + targetHost);
+		show("executing request: " + httpget.getRequestLine());
+		show("via proxy: " + proxy);
+		show("to target: " + targetHost);
 
 		HttpResponse response = httpclient.execute(targetHost, httpget, localcontext);
 		String line = getFirstLine(response);
@@ -231,26 +243,39 @@ public abstract class TestBase {
 
 		return line;
 	}
+	
+	void showTestInfo() throws IOException{
+		loadProperties();
+		
+		String url = ourProps.getCloudSite();
+		targetHost = new HttpHost(url);
+		
+		showAlways("");
+		showAlways("executing request via proxy: " + proxy);
+		showAlways("to target: " + targetHost);		
+		showAlways("");
+	}
+	
 
 	String getFirstLine(HttpResponse response) throws IOException {
 		String line = "";
 		HttpEntity entity = response.getEntity();
 
-		System.out.println(response.getStatusLine());
+		show(response.getStatusLine().toString());
 		if (entity != null) {
 //			System.out.println("Response content length: " + entity.getContentLength());
 			InputStream content = entity.getContent();
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(content));
 			while ((line = in.readLine()) != null) {
-				System.out.println(line);
+				show(line);
 				break;
 			}
 
 			in.close();
 		}
 
-		System.out.println("----------------------------------------");
+		show("----------------------------------------");
 
 		EntityUtils.consume(entity);
 
@@ -290,7 +315,7 @@ public abstract class TestBase {
 	String listProjects(String details ) throws IOException, ClientProtocolException {
 		HttpGet httpget = new HttpGet("/api/1.0/project/" + details);
 		// httpget.setHeader("authToken", token);
-		System.out.println("executing request: " + httpget.getRequestLine());
+		show("executing request: " + httpget.getRequestLine());
 		HttpResponse response = httpclient.execute(targetHost, httpget, localcontext);
 
 		Assert.assertTrue("Returned status is not OK!", (200 == checkStatusCode(response)));
@@ -303,7 +328,7 @@ public abstract class TestBase {
 		
 		// http.setHeader("authToken", token);
 		
-		System.out.println("executing request: " + http.getRequestLine());
+		show("executing request: " + http.getRequestLine());
 		return( httpclient.execute(targetHost, http, localcontext));
 	}
 
