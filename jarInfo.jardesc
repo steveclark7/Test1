@@ -11,12 +11,18 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <javaElement handleIdentifier="=REST_API/src"/>
+        <folder path="/REST_API/sdks/httpcomponents-client-4.1.2/lib"/>
+        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/README.txt"/>
         <file path="/REST_API/log4j.properties"/>
-        <folder path="/REST_API/sdks"/>
+        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/LICENSE.txt"/>
+        <file path="/REST_API/agree.PNG"/>
+        <file path="/REST_API/sdks/junit-4.8.1.jar"/>
+        <javaElement handleIdentifier="=REST_API/src"/>
         <file path="/REST_API/apitests.properties"/>
         <file path="/REST_API/123.txt"/>
-        <file path="/REST_API/agree.PNG"/>
+        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/NOTICE.txt"/>
         <file path="/REST_API/readme.txt"/>
+        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/RELEASE_NOTES.txt"/>
+        <file path="/REST_API/sdks/junit-dep-4.8.1.jar"/>
     </selectedElements>
 </jardesc>
