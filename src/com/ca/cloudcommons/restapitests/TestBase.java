@@ -259,7 +259,7 @@ public abstract class TestBase {
 		HttpResponse response = httpclient.execute(targetHost, httpget, localcontext);
 		String line = getFirstLine(response);
 
-		Assert.assertTrue("Returned status is not OK!", (code == checkStatusCode(response)));
+		Assert.assertTrue("getToken status is not OK!", (code == checkStatusCode(response)));
 
 		return line;
 	}
@@ -277,6 +277,9 @@ public abstract class TestBase {
 		if( ourProps.getProxy().length() > 0 ){
 			proxy = ourProps.getProxy();
 		}
+		
+		//TODO update this for every release
+		showAlways("REST API tests version 1.0");
 		
 		showAlways("executing requests via proxy: " + proxy);
 		showAlways("to target: " + targetHost);
@@ -345,7 +348,8 @@ public abstract class TestBase {
 		show("executing request: " + httpget.getRequestLine());
 		HttpResponse response = httpclient.execute(targetHost, httpget, localcontext);
 
-		Assert.assertTrue("Returned status is not OK!", (200 == checkStatusCode(response)));
+		int code = checkStatusCode(response);		
+		Assert.assertTrue("listProjects returned http code: " + code, (200 == code));
 
 		return getFirstLine(response);
 	}

@@ -34,20 +34,18 @@ public class TestRead extends TestBase {
 	}
 
 	@Test
-	public void getAuthTokenByNoUser() throws Exception {
+	public void getAuthTokenByGuest() throws Exception {
 		clearHttpUserPass();
-		
+
 		// this should fail as not logged in
-		getToken(HTTP_UNAUTHORIZED);		
+		getToken(HTTP_UNAUTHORIZED);
 	}
-	
-	
+
 	@Test
 	public void getAuthToken() throws Exception {
 		String token = getToken(HTTP_OK);
 		Assert.assertTrue("Can't find token", token.length() > 0);
 	}
-
 
 	@Test
 	public void listAllProjects() throws Exception {
@@ -55,16 +53,28 @@ public class TestRead extends TestBase {
 	}
 
 	@Test
+	/**
+	 * List the project defined in properties file
+	 */
+	public void listProject() throws Exception {
+		listProjects(ourProps.getProject());
+	}
+	
+	@Test
 	public void listFirstProject() throws Exception {
 		HttpGet httpget = new HttpGet("/api/1.0/project");
 
 		HttpResponse response = execute(httpget);
 		String projects = getFirstLine(response);
 
+		if (projects.startsWith("[") && projects.endsWith("]")) {
+			projects = projects.substring(1, projects.length() - 1);
+		}
+
 		ArrayList<String> al = regxCsvArray(projects);
 
-		if (al.size() > 1) {
-			String proj1 = al.get(1);
+		if (al.size() > 0) {
+			String proj1 = al.get(0);
 			httpget = new HttpGet("/api/1.0/project/" + proj1);
 			response = execute(httpget);
 			showResponse(response);
@@ -76,5 +86,6 @@ public class TestRead extends TestBase {
 			Assert.fail("Can't read first project");
 		}
 	}
+
 
 }

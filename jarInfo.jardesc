@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
 <jardesc>
-    <jar path="REST_API/restTest.jar"/>
+    <jar path="REST_API/forgeApiTest.jar"/>
     <options buildIfNeeded="false" compress="false" descriptionLocation="/REST_API/jarInfo.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
