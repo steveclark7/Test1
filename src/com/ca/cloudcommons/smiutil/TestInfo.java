@@ -1,4 +1,4 @@
-package com.ca.cloudcommons.smiapitests;
+package com.ca.cloudcommons.smiutil;
 
 import org.junit.After;
 import org.junit.AfterClass;

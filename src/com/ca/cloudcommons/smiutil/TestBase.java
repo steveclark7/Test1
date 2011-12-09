@@ -1,4 +1,4 @@
-package com.ca.cloudcommons.smiapitests;
+package com.ca.cloudcommons.smiutil;
 
 import java.io.BufferedReader;
 import java.io.IOException;

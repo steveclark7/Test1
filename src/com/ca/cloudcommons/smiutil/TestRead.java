@@ -1,4 +1,4 @@
-package com.ca.cloudcommons.smiapitests;
+package com.ca.cloudcommons.smiutil;
 
 import java.net.URI;
 import java.util.List;

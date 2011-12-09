@@ -1,4 +1,4 @@
-package com.ca.cloudcommons.smiapitests;
+package com.ca.cloudcommons.smiutil;
 
 //OptionsTip.java
 import org.apache.commons.cli.BasicParser;
