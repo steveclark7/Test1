@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
 <jardesc>
-    <jar path="REST_API/forgeApiTest.jar"/>
-    <options buildIfNeeded="false" compress="false" descriptionLocation="/REST_API/jarInfo.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <jar path="SmiApi/forgeApiTest.jar"/>
+    <options buildIfNeeded="false" compress="false" descriptionLocation="/SmiApi/jarInfo.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
     <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
@@ -11,18 +11,18 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <folder path="/REST_API/sdks/httpcomponents-client-4.1.2/lib"/>
-        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/README.txt"/>
-        <file path="/REST_API/log4j.properties"/>
-        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/LICENSE.txt"/>
-        <file path="/REST_API/agree.PNG"/>
-        <file path="/REST_API/sdks/junit-4.8.1.jar"/>
-        <javaElement handleIdentifier="=REST_API/src"/>
-        <file path="/REST_API/apitests.properties"/>
-        <file path="/REST_API/123.txt"/>
-        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/NOTICE.txt"/>
-        <file path="/REST_API/readme.txt"/>
-        <file path="/REST_API/sdks/httpcomponents-client-4.1.2/RELEASE_NOTES.txt"/>
-        <file path="/REST_API/sdks/junit-dep-4.8.1.jar"/>
+        <folder path="/SmiApi/sdks/httpcomponents-client-4.1.2/lib"/>
+        <file path="/SmiApi/sdks/httpcomponents-client-4.1.2/README.txt"/>
+        <file path="/SmiApi/log4j.properties"/>
+        <file path="/SmiApi/sdks/httpcomponents-client-4.1.2/LICENSE.txt"/>
+        <file path="/SmiApi/agree.PNG"/>
+        <file path="/SmiApi/sdks/junit-4.8.1.jar"/>
+        <javaElement handleIdentifier="=SmiApi/src"/>
+        <file path="/SmiApi/apitests.properties"/>
+        <file path="/SmiApi/123.txt"/>
+        <file path="/SmiApi/sdks/httpcomponents-client-4.1.2/NOTICE.txt"/>
+        <file path="/SmiApi/readme.txt"/>
+        <file path="/SmiApi/sdks/httpcomponents-client-4.1.2/RELEASE_NOTES.txt"/>
+        <file path="/SmiApi/sdks/junit-dep-4.8.1.jar"/>
     </selectedElements>
 </jardesc>

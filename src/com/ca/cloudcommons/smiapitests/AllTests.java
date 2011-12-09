@@ -1,4 +1,4 @@
-package com.ca.cloudcommons.restapitests;
+package com.ca.cloudcommons.smiapitests;
 
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.ca.cloudcommons.restapitests;
+package com.ca.cloudcommons.smiapitests;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,10 +18,13 @@ public class TestInfo extends TestBase {
 
 	@Before
 	public void setUp() throws Exception {
+		setupHttp();		
 	}
 	
 	@After
 	public void tearDown() throws Exception {
+		closeHttp();
+		
 	}
 	
 	

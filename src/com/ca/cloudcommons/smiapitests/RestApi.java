@@ -1,4 +1,4 @@
-package com.ca.cloudcommons.restapitests;
+package com.ca.cloudcommons.smiapitests;
 
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;

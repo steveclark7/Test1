@@ -1,14 +1,21 @@
-package com.ca.cloudcommons.restapitests;
+package com.ca.cloudcommons.smiapitests;
 
 import java.util.Properties;
 
 public class UiProperties {
 
+	public static String PROPS = "tests.properties";
+	
 	private Properties ourProps;
-
-	UiProperties(Properties ourProps) {
-		this.ourProps = ourProps;
+	
+	public UiProperties() {
+		ourProps = Util.load(this, PROPS);
 	}
+	
+
+//	UiProperties(Properties ourProps) {
+//		this.ourProps = ourProps;
+//	}
 
 	public String getUser() {
 		return ourProps.getProperty("User", "a.user@ca.com");
@@ -44,7 +51,7 @@ public class UiProperties {
 	}
 
 	public String getCloudSite() {
-		return ourProps.getProperty("CloudSite", "CloudSite");
+		return ourProps.getProperty("CloudSite", "50.57.192.171");
 	}
 
 	public String getProject() {

@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="sdks/httpcomponents-client-4.1.2/lib/httpcore-4.1.2.jar"/>
 	<classpathentry kind="lib" path="sdks/httpcomponents-client-4.1.2/lib/httpmime-4.1.2.jar"/>
 	<classpathentry kind="lib" path="sdks/junit-4.8.1.jar"/>
+	<classpathentry kind="lib" path="sdks/xmlout.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
