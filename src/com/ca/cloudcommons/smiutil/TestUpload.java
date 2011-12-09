@@ -38,22 +38,24 @@ public class TestUpload extends TestBase {
 
 
 	@Test
-	@Ignore
 	public void createService() throws Exception {
-		// https://smi.cloudcommons.com:8443/Insight_API/json/SMI/0.5/service/create?
-		// providerUUID=50fc741c-5447-11df-a06a-c7daeae07f53&name=TestService&desc=testservice
-
+//		https://MachineName.ca.com:8443/Insight_API/json/SMI/0.5/service/create?
+//			providerUUID=50fc741c544711df823a8f98fa01fa88&name=TestService&desc=testservice
+//			&key=df3936ec01c5d3adf9f0048116cd5b84&secret=13f6232ebf484e57103cd4ac234a22aa
+			
 		HttpConnector smi = getHttpSmi();
 		List<NameValuePair> qparams = smi.getAuthenticationList();
 
 		List<NameValuePair> payload = new ArrayList<NameValuePair>();
 		String uuid = "ae89bb71-b8d2-0c0b-e040-13ac0d6e2518";
 		payload.add(new BasicNameValuePair("providerUUID", uuid));
+		payload.add(new BasicNameValuePair("name", "SJC_TestService"));
+		payload.add(new BasicNameValuePair("desc", "SJC_TestService description"));
 		payload.addAll(qparams);
 
 		show(uuid);
 
-		URI uri = smi.getURI("/Insight_API/xml/SMI/0.5/service", payload);
+		URI uri = smi.getURI("/Insight_API/xml/SMI/0.5/service/create", payload);
 		HttpPost http = new HttpPost(uri);
 
 		show("executing request: " + http.getRequestLine());
