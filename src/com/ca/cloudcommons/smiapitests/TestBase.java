@@ -68,9 +68,15 @@ public abstract class TestBase {
 	public TestBase() {
 		super();
 	}
+	
+	
+	public UiProperties getOurProps() {
+		return ourProps;
+	}
 
-	
-	
+
+
+
 	public HttpConnector getHttpSmi() {
 		return httpSmi;
 	}

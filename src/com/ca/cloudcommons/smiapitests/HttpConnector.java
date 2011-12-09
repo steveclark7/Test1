@@ -178,6 +178,15 @@ public class HttpConnector implements HttpConnect {
 		
 		return qparams;
 	}
+
+	@Override
+	public List<NameValuePair> getAdminAuthentication() {
+		List<NameValuePair> qparams = new ArrayList<NameValuePair>();
+		qparams.add(new BasicNameValuePair("key", ourProps.getAdminUser()));
+		qparams.add(new BasicNameValuePair("secret", ourProps.getAdminPassword()));
+		
+		return qparams;
+	}
 	
 	
 

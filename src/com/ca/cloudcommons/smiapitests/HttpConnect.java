@@ -23,5 +23,7 @@ public interface HttpConnect {
 	public String configurationInfo() throws IOException;
 
 	public List<NameValuePair> getAuthenticationList();
+	
+	public List<NameValuePair> getAdminAuthentication();
 
 }

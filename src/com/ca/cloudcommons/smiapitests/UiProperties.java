@@ -43,13 +43,22 @@ public class UiProperties {
 	}
 
 	public String getProxyUser() {
-		return ourProps.getProperty("ProxyUser", "a.user@ca.com");
+		return ourProps.getProperty("ProxyUser", "p.user@ca.com");
 	}
 
 	public String getProxyPassword() {
 		return ourProps.getProperty("ProxyPassword", "password");
 	}
 
+	
+	public String getAdminUser() {
+		return ourProps.getProperty("AdminUser", "Admin.user@ca.com");
+	}
+
+	public String getAdminPassword() {
+		return ourProps.getProperty("AdminPassword", "password");
+	}
+	
 	public String getCloudSite() {
 		return ourProps.getProperty("CloudSite", "50.57.192.171");
 	}

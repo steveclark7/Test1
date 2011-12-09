@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+<!--
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<param name="Threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %5p %c:%L - %m%n" />
+		</layout>
+	</appender>
+	
+   <category name="com.ca.cloudcommons.systemtests.UiListener">
+     <appender-ref ref="quietinfo"/>
+   </category>
+	
+-->
+
+	<appender name="quietinfo" class="org.apache.log4j.ConsoleAppender">
+		<param name="Threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%m%n" />
+		</layout>
+	</appender>
+
+
+	<!-- set value of apache logging -->
+	<logger name="org.apache.http">
+		<level value="error" />
+	</logger>
+
+	<root>
+		<appender-ref ref="quietinfo" /> 
+	</root>
+</log4j:configuration>

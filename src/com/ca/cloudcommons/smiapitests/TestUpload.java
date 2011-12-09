@@ -1,16 +1,21 @@
 package com.ca.cloudcommons.smiapitests;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URIUtils;
+import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestUpload extends TestBase {
@@ -34,7 +39,35 @@ public class TestUpload extends TestBase {
 		closeHttp();
 	}
 
+
 	@Test
+	@Ignore
+	public void createService() throws Exception {
+		// https://smi.cloudcommons.com:8443/Insight_API/json/SMI/0.5/service/create?
+		// providerUUID=50fc741c-5447-11df-a06a-c7daeae07f53&name=TestService&desc=testservice
+
+		HttpConnector smi = getHttpSmi();
+		List<NameValuePair> qparams = smi.getAuthenticationList();
+
+		List<NameValuePair> payload = new ArrayList<NameValuePair>();
+		String uuid = "ae89bb71-b8d2-0c0b-e040-13ac0d6e2518";
+		payload.add(new BasicNameValuePair("providerUUID", uuid));
+		payload.addAll(qparams);
+
+		show(uuid);
+
+		URI uri = smi.getURI("/Insight_API/xml/SMI/0.5/service", payload);
+		HttpPost http = new HttpPost(uri);
+
+		show("executing request: " + http.getRequestLine());
+		HttpResponse response = smi.execute(http);
+
+		showResponse(response);
+
+	}
+
+	@Test
+	@Ignore
 	public void showSurvey() throws Exception {
 		ResourceSurvey xgen = new ResourceSurvey();
 
@@ -51,7 +84,7 @@ public class TestUpload extends TestBase {
 		xgen.add(ua);
 
 		HttpConnector smi = getHttpSmi();
-		
+
 		List<NameValuePair> qparams = smi.getAuthenticationList();
 		String payload = xgen.getXml();
 		qparams.add(new BasicNameValuePair("xmlData", payload));
