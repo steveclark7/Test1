@@ -35,6 +35,7 @@ public class TestRead extends TestBase {
 	}
 	
 	@Test
+	@Ignore	
 	public void listService() throws Exception {
 		// https://smi.cloudcommons.com:8443/Insight_API/json/SMI/0.5/service/create?
 		// providerUUID=50fc741c-5447-11df-a06a-c7daeae07f53&name=TestService&desc=testservice
@@ -53,6 +54,14 @@ public class TestRead extends TestBase {
 		HttpResponse response = smi.execute(http);
 
 		showResponse(response);
+	}
+
+	@Test
+	public void parseInputFile() throws Exception {
+		ProductFileParser pp = new ProductFileParser();
+		
+		pp.parseFile("export_all_products-filtered-test1.csv");
+		
 	}
 	
 
