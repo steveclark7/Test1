@@ -23,6 +23,7 @@ import org.apache.http.client.utils.URIUtils;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.rules.TestName;
@@ -46,6 +47,8 @@ enum SleepTime {
 }
 
 public abstract class TestBase {
+	static Logger _log = Logger.getLogger(TestBase.class);
+	
 
 	public final int HTTP_OK = 200;
 	public final int HTTP_UNAUTHORIZED = 401;
@@ -54,7 +57,7 @@ public abstract class TestBase {
 	public TestName name = new TestName();
 
 	private static boolean showMe = true;
-	
+
 	private HttpConnector httpSmi;
 	private UiProperties ourProps;
 
@@ -68,14 +71,10 @@ public abstract class TestBase {
 	public TestBase() {
 		super();
 	}
-	
-	
+
 	public UiProperties getOurProps() {
 		return ourProps;
 	}
-
-
-
 
 	public HttpConnector getHttpSmi() {
 		return httpSmi;
@@ -85,14 +84,12 @@ public abstract class TestBase {
 		return name.getMethodName();
 	}
 
-	
 	void loadProperties() throws Exception {
-//		Properties props = new Properties();
-//		props.load(new FileInputStream("c:\\smiapitests.properties"));
+		// Properties props = new Properties();
+		// props.load(new FileInputStream("c:\\smiapitests.properties"));
 		ourProps = new UiProperties();
-		httpSmi.setupHttp( ourProps );			
+		httpSmi.setupHttp(ourProps);
 	}
-	
 
 	private void startTest() {
 		System.out.println("\nRunning: " + getMethodName());
@@ -106,7 +103,7 @@ public abstract class TestBase {
 		// TODO logging
 
 		if (ourProps.getDebugLevel() > 0) {
-			System.out.println(info);
+			_log.info(info);
 		}
 	}
 
@@ -115,6 +112,7 @@ public abstract class TestBase {
 	}
 
 	static void showStatic(String info) {
+		
 		// TODO logging
 		if (showMe) {
 			System.out.println(info);
@@ -137,8 +135,7 @@ public abstract class TestBase {
 	}
 
 	/**
-	 * In general every test should call this method because it cleans up
-	 * (consumes the) call.
+	 * In general every test should call this method because it cleans up (consumes the) call.
 	 * 
 	 * @param response
 	 * @throws IOException
@@ -168,31 +165,27 @@ public abstract class TestBase {
 		EntityUtils.consume(entity);
 	}
 
-
 	/**
-	 * Called before all test cases that access a web site. Sets up all
-	 * credentials and http globals.
+	 * Called before all test cases that access a web site. Sets up all credentials and http globals.
 	 * 
 	 * @throws Exception
 	 */
 	void setupHttp() throws Exception {
 
-		httpSmi = new HttpConnector();				
-		
+		httpSmi = new HttpConnector();
+
 		loadProperties();
-		
+
 		startTest();
 
 	}
 
-
 	void closeHttp() {
-		
+
 		show("Ending: " + getMethodName());
 		httpSmi.closeHttp();
 		show("");
 	}
-
 
 	void showTestInfo() throws IOException {
 
@@ -253,7 +246,6 @@ public abstract class TestBase {
 		return csvList;
 	}
 
-
 	// http://50.57.192.171/Insight_API/xml/SMI/0.5/categories?
 	// category/aba45240-8291-11df-bca3-339c3162b513/
 	// service/b141b6de-09aa-4a57-bf11-eb35e6458dda/naturalScore?
@@ -261,7 +253,6 @@ public abstract class TestBase {
 
 	// http://50.57.192.171/Insight_API/xml/SMI/0.5/categories?
 	// &key=ae5b26097e666ceadd6f851c8a5abbcd&secret=8af0b36d77aece511f661facfecf89ef
-
 
 	String listAllItems1(String details) throws Exception {
 		// HttpGet http = new HttpGet("/Insight_API/xml/SMI/0.5/" + details);
@@ -276,7 +267,7 @@ public abstract class TestBase {
 				encodedUri, null);
 
 		HttpGet http = new HttpGet(uri);
-				
+
 		// http.setHeader(header)
 		// show("executing request: " + http.getRequestLine());
 
@@ -288,10 +279,10 @@ public abstract class TestBase {
 		// http.addHeader("secret", ourProps.getPassword());
 
 		// http.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
-		HttpResponse response = execute(http);		
+		HttpResponse response = execute(http);
 
-//		showXMLResponse(response);
-		
+		// showXMLResponse(response);
+
 		showResponse(response);
 
 		Assert.assertTrue("Returned status is not OK!", (200 == checkStatusCode(response)));
@@ -311,7 +302,7 @@ public abstract class TestBase {
 				encodedUri, null);
 
 		HttpGet http = new HttpGet(uri);
-				
+
 		// http.setHeader(header)
 		// show("executing request: " + http.getRequestLine());
 
@@ -323,43 +314,42 @@ public abstract class TestBase {
 		// http.addHeader("secret", ourProps.getPassword());
 
 		// http.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
-		HttpResponse response = execute(http);		
+		HttpResponse response = execute(http);
 
 		Document doc = getXmlFromResponse(response);
-		
-//		showResponse(response);
+
+		// showResponse(response);
 
 		Assert.assertTrue("Returned status is not OK!", (200 == checkStatusCode(response)));
 		return doc;// getFirstLine(response);
 	}
-	
-	
+
 	HttpResponse execute(HttpRequestBase httpRequest) throws IOException, ClientProtocolException {
 		// String token = getToken();
 
 		// http.setHeader("authToken", token);
 
 		show("executing request: " + httpRequest.getRequestLine());
-		return httpSmi.execute( httpRequest);
+		return httpSmi.execute(httpRequest);
 	}
 
 	Document getXMLDocument(InputStream content) throws Exception {
 		Document doc = null;
 
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			doc = dBuilder.parse(content);
-			doc.getDocumentElement().normalize();
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		doc = dBuilder.parse(content);
+		doc.getDocumentElement().normalize();
 
-//			showResultValues(doc);
+		// showResultValues(doc);
 
 		return doc;
 	}
 
 	private void showResultValues(Document doc) {
-		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+		show("Root element :" + doc.getDocumentElement().getNodeName());
 		NodeList nList = doc.getElementsByTagName("result");
-		System.out.println("-----------------------");
+		show("-----------------------");
 
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 
@@ -368,36 +358,15 @@ public abstract class TestBase {
 
 				Element eElement = (Element) nNode;
 
-				System.out.println("returnCodee : " + getTagValue("returnCode", eElement));
-				System.out.println("errorMessage : " + getTagValue("errorMessage", eElement));
-				System.out.println("errorReason : " + getTagValue("errorReason", eElement));
-				System.out.println("resultCount : " + getTagValue("resultCount", eElement));
+				show("returnCodee : " + getTagValue("returnCode", eElement));
+				show("errorMessage : " + getTagValue("errorMessage", eElement));
+				show("errorReason : " + getTagValue("errorReason", eElement));
+				show("resultCount : " + getTagValue("resultCount", eElement));
 			}
 		}
 	}
 
-	
-	void createProviderList(Document doc) {
-		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-		NodeList nList = doc.getElementsByTagName("result");
-		System.out.println("-----------------------");
-		
-		for (int temp = 0; temp < nList.getLength(); temp++) {
 
-			Node nNode = nList.item(temp);
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
-				Element eElement = (Element) nNode;
-
-				System.out.println("returnCodee : " + getTagValue("uuid", eElement));
-				System.out.println("errorMessage : " + getTagValue("name", eElement));
-				System.out.println("errorReason : " + getTagValue("ResourceService-Bean", eElement));
-//				System.out.println("resultCount : " + getTagValue("resultCount", eElement));
-			}
-		}
-	}
-	
-	
 	private String getTagValue(String sTag, Element eElement) {
 		String retval = "";
 
@@ -410,16 +379,15 @@ public abstract class TestBase {
 
 			retval = nValue.getNodeValue();
 		}
-		
+
 		return retval;
 	}
 
 	/**
-	 * In general every test should call this method because it cleans up
-	 * (consumes the) call.
+	 * In general every test should call this method because it cleans up (consumes the) call.
 	 * 
 	 * @param response
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	Document getXmlFromResponse(HttpResponse response) throws Exception {
 		Document doc = null;
@@ -427,14 +395,14 @@ public abstract class TestBase {
 
 		show(response.getStatusLine().toString());
 		if (entity != null) {
-			// System.out.println("Response content length: " +
+			// show("Response content length: " +
 			// entity.getContentLength());
 			InputStream content = entity.getContent();
 
 			doc = getXMLDocument(content);
-			
+
 			showResultValues(doc);
-			
+
 			// BufferedReader in = new BufferedReader(new
 			// InputStreamReader(content));
 			// String line;
@@ -450,8 +418,9 @@ public abstract class TestBase {
 		// If you don't call this after a http execution you get connection
 		// errors.
 		EntityUtils.consume(entity);
-		
+
 		return doc;
 	}
+
 
 }

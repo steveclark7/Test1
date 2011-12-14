@@ -6,10 +6,15 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.apache.log4j.Logger;
 
 public class SmiUtil {
+	
+	static Logger _log = Logger.getLogger(SmiUtil.class);
+	
 	public static void main(String args[]) {
 		try {
+			Util.initLog4j();
 			Options opt = new Options();
 
 			opt.addOption("h", false, "Print help for this application");

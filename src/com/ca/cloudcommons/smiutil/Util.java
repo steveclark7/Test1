@@ -18,6 +18,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 
 /** General utility methods */
@@ -108,12 +110,12 @@ public class Util {
 	}
 
 	/** Use default log4j config. */
-//	public static void initLog4j() {
-//		Logger root = Logger.getRootLogger();
-//		if (!root.getAllAppenders().hasMoreElements()) {
-//			BasicConfigurator.configure();
-//			root.warn("log4j configuration file not found using defaults!!!");
-//		}
-//	}
+	public static void initLog4j() {
+		Logger root = Logger.getRootLogger();
+		if (!root.getAllAppenders().hasMoreElements()) {
+			BasicConfigurator.configure();
+			root.warn("log4j configuration file not found using defaults!!!");
+		}
+	}
 
 }

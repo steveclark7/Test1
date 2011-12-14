@@ -135,7 +135,6 @@ public class ProductFileParser {
 		String status, product_name, manufacturer, description;
 
 		public NameIp(String status, String product_name, String manufacturer, String description) {
-			super();
 			this.status = status;
 			this.product_name = product_name;
 			this.manufacturer = manufacturer;
