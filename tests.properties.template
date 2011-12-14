@@ -1,0 +1,26 @@
+#comment out the following line to disable the use of a proxy server for http access
+Proxy=caproxy.ca.com
+ProxyPort=80
+
+ProxyUser=user
+ProxyPassword=pass
+
+#Internal Overlord on Betty
+#CloudSite=172.19.110.13
+
+#External Overlord on Betty
+CloudSite=50.57.192.171
+User=key
+Password=pass
+
+AdminUser=key
+AdminPassword=pass
+
+Project=a valid project name in the cloud site (case sensitive)
+
+
+# 1 gives more information
+DebugLevel=1
+
+#BARNEY = dev-api.cloudcommons.com
+#FRED = api.cloudcommons.com

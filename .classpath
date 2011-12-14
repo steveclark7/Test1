@@ -16,5 +16,6 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/SmiUtil/sdks/commons-cli-1.2-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="sdks/log4j-1.2.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

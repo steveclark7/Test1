@@ -1,0 +1,815 @@
+status,product_name,manufacturer,description
+Enabled,CA Service Desk Manager Cloud Appliance for MSPs 5 Users,CA Technologies - Virtualization & Automation,"<p class=""Body"">IT is part of almost everything a business does these days, whether that’s supporting internal processes or servicing their customers. When IT services are unavailable, the impact can be costly and damaging.  With the proliferation of IT throughout the business comes an increase in incident volumes to the Service Desk, but not necessarily with a corresponding increase in staff.  One way to solve this conundrum is by empowering the end-users to solve their own problems. </p>
+<p class=""Body"">Unlike the competition, CA Service Desk Manager offers Support Automation so end-users can resolve their own issues without having to follow cumbersome step-by-step instructions by using knowledge article scripts. Only CA enables support staff to remotely diagnose and resolve desktop issues behind the scenes, so users can remain productive while their issues are being resolved.  Analysts can also engage in chat sessions with end-users to enable more efficient problem-solving.  All activity is automatically captured in the audit log for the incident or request.</p>
+<p>CA Service Desk Manager leads the market with 15 certified ITIL v3 processes, as verified through the PinkVERIFY toolset 3.1, and the Office of Government Commerce ITIL Software Scheme (OGC ISS).</p>
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Process Automation Connector for CA Service Desk Manager,CA Technologies - Virtualization & Automation,"CA Process Automation Connector for CA Service Desk Manager ® makes integration with and orchestration of CA Service Desk Manager ® easy, straightforward, and quick.  When CA Service Desk Manager is integrated into automated IT processes, incidents can be automatically remediated saving time and improving SLAs.  Furthermore, incidents can be automatically enriched, change requirements satisfied more quickly, and data collection for problem management more consistently collected.  In short, IT becomes better while delivering and managing IT becomes easier and less costly."
+Enabled,CA Process Automation Connector for CA NSM,CA Technologies - Virtualization & Automation,"CA Process Automation Connector for CA NSM ® makes integration with and orchestration of CA NSM ® easy, straightforward, and quick.  When CA NSM is integrated into automated IT processes, incidents can be automatically remediated saving time and improving SLAs.  Furthermore, incidents can be automatically enriched, change requirements satisfied more quickly, and data collection for problem management more consistently collected.  In short, IT becomes better while delivering and managing IT becomes easier and less costly."
+Enabled,CA Process Automation Connector for CA ITCM,CA Technologies - Virtualization & Automation,"The CA Connector for CA ITCM makes integration with and orchestration of CA ITCM easy, straightforward, and quick so IT can integrate ITCM with other steps in an end to end IT process."
+Enabled,CA Process Automation Connector for CA Cohesion Application Configuration Manager,CA Technologies - Virtualization & Automation,"The CA Process Automation Connector for CA Cohesion ACM ® makes integration with and orchestration of CA Cohesion ACM® easy, straightforward, and quick so IT can use configuration data to drive end to end IT processes.  This makes IT processes more robust, more valuable, and more data driven than ever before; which means, IT gets things done right, fast, and with unprecedented flexibility and control."
+Enabled,CA Oblicore Guarantee Appliance for MSPs 1 Contract,CA Technologies - Virtualization & Automation,"<p>CA Oblicore Guarantee offers a comprehensive, scalable platform that helps you to manage your customers’ service level obligations.</p>
+<p class=""Body"">Whether you’re ready to implement service level management for the first time, or replacing a customized reporting solution, CA Technologies has powerful out-of-the-box functionality to help get you up and running quickly.</p>
+<p>CA Oblicore Guarantee’s unique infrastructure-agnostic approach is designed to enable you to monitor and report service performance utilizing the infrastructure components (e.g., hardware, applications, network monitoring tools) that you already have in place, regardless of the vendor.</p>
+<p>The solution enables the company to manage both traditional and cloud-based services by helping to understand which services are currently running in your environment, tracking both service performance and how the service level agreement performance and comparing with other, internal and external alternatives.</p>
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,MYSQL5 - MySQL database appliance,CA Technologies - AppLogic Appliances,"<p>MYSQL is a database appliance based on the MySQL database engine (http://www.mysql.org). It provides an easy way to add a database to any application. MYSQL stores the database on an application-defined volume that can be configured on each MYSQL instance. MYSQL automatically creates an empty database when it starts on an empty volume.</p>
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time."
+Enabled,LINUX5 - Generic Linux Servers,CA Technologies - AppLogic Appliances,"LINUX5 and LINUX64 are general server appliances. They may be branched to make new server appliances: singletons or server classes.
+<br><BR>
+Each one includes a reasonably complete installation of its OS, including the GCC compiler if available. This allows installing and building software on the branched appliances.
+<br><BR>
+The generic server appliances are designed to be used in two ways:
+<br><BR>
+As a customized server, by branching the base class to form singleton and modifying its class volume appropriately.
+<br><BR>
+As a template for building other server appliances, by using it as a base to create new application-specific or global catalog classes.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><BR>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatGenericLinux.html"" target=""_blank"">LINUX5, LINUX64: Generic Linux Servers Documentation</a>"
+Enabled,TOMCAT - Tomcat Application Servers,CA Technologies - AppLogic Appliances,"TOMCAT is web server appliance based on the Sun Java machine and Apache Tomcat, a Java Servlet and Java Server Pages container developed under the Apache License. The main documentation for Tomcat is at tomcat.apache.org. Tomcat provides standards-compliant support for Servlets and JSPs. Tomcat can work as standalone web server or as application server.
+<br><br>
+TOMCAT serves static web content, automatically deploys web applications, executes servlets and Java Server Pages from a user-configurable content volume. The paths to the documents are configurable, so that the same volume can be shared between multiple web servers and/or other appliances serving different content.
+<br><br>
+TOMCAT serves HTTP/1.1 and HTTP/1.0 protocol for web clients and AJP 1.3 for requests from front end servers (ex. Apache with mod_proxy_ajp).
+<br><br>
+Like WEBx servers, TOMCAT has three generic output terminals intended for accessing external services from scripts on the content volume. The db terminal is used for accessing a various databases; the fs terminal is used for accessing shared file storage (using NFS); and the aux terminal is created for sending e-mail messages to an SMTP server.
+<br><br>
+The log terminal should be used to connect TOMCAT to a shared file system where TOMCAT can store log files.
+<br><br>
+Configuration of the server is defined using various properties. These properties are designed to cover the most usage variants in an easy-to-configure way and in most cases only a few need to be set to a non-default values.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time."
+Enabled,"WEB5, WEB64 - Web server appliances",CA Technologies - AppLogic Appliances,"WEB is a web server appliance based on the Apache open-source web server software (see http://httpd.apache.org).
+<br><br>
+WEB serves static web content and executes scripts from a user-configurable read-only content volume. The paths to the documents and scripts are configurable, so that the same volume can be shared between multiple web servers and/or other appliances serving different content.
+<br><br>
+WEB has three generic output terminals intended for accessing external services from scripts on the content volume. The db terminal is for accessing a MySQL database; the fs terminal is for accessing shared file storage (using NFS); and the aux terminal is for any auxiliary access (e.g., sending e-mail messages to a SMTP server).
+<br><br>
+The log terminal can be used to connect WEB to a shared file system on which WEB can store its logs.
+<br><br>
+The configuration of the web server is provided through properties. The properties are designed to cover the most uses in an easy-to-configure way and in most cases only a few need to be set to non-default values. Advanced configurations can be achieved through include files in the Apache configuration format, coming from the content volume. Access and options to content and script files can be further specialized through .htaccess files in the content directories.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatWebserversWeb.html"" target=""_blank"">WEB5, WEB64 - Web Server Appliances Documentation</a>
+<br><br>"
+Enabled,WEBx4 - Scalable Web server appliance,CA Technologies - AppLogic Appliances,"WEBx4 is a scalable web server that consists of a single load balancer (HLB) and four web servers (WEB5).
+<br><br>
+WEBx4 serves static web content and executes scripts from a user-configurable read-only content volume. The paths to the documents and scripts are configurable, so that the same volume can be shared between multiple web servers and/or other appliances serving different content.
+<br><br>
+WEBx4 has three generic output terminals intended for accessing external services from scripts on the content volume. The db terminal is for accessing a MySQL database; the fs terminal is for accessing shared file storage (using NFS); and the aux terminal is for sending e-mail messages to an SMTP server.
+<br><br>
+The log terminal can be used to connect WEBx4 to a shared file system on which WEBx4 can store its logs.
+<br><br>
+The configuration of the web server is provided through properties. The properties are designed to cover the most uses in an easy-to-configure way and in most cases only a few need to be set to non-default values. Advanced configurations can be achieved through include files in the Apache configuration format, coming from the content volume. Access and options to content and script files can be further specialized through .htaccess files in the content directories.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatWebserversWebx4.html"" target=""_blank"">WEBx4 - Scalable Web Server Appliance Documentation</a>"
+Enabled,WEBx8 - Scalable Web server appliance,CA Technologies - AppLogic Appliances,"WEBx8 is a scalable web server that consists of a single load balancer (HLB) and eight web servers (WEB5).
+<br><br>
+WEBx8 serves static web content and executes scripts from a user-configurable read-only content volume. The paths to the documents and scripts are configurable, so that the same volume can be shared between multiple web servers and/or other appliances serving different content.
+<br><br>
+WEBx8 has three generic output terminals intended for accessing external services from scripts on the content volume. The db terminal is for accessing a MySQL database; the fs terminal is for accessing shared file storage (using NFS); and the aux terminal is for sending e-mail messages to an SMTP server.
+<br><br>
+The log terminal can be used to connect WEBx8 to a shared file system on which WEBx8 can store its logs.
+<br><br>
+The configuration of the web server is provided through properties. The properties are designed to cover the most uses in an easy-to-configure way and in most cases only a few need to be set to non-default values. Advanced configurations can be achieved through include files in the Apache configuration format, coming from the content volume. Access and options to content and script files can be further specialized through .htaccess files in the content directories.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatWebserversWebx8.html"" target=""_blank"">WEBx8 - Scalable Web Server Appliance Documentation</a>
+<br><br>"
+Enabled,NAS - file server/NAS box (samba + http interface),CA Technologies - AppLogic Appliances,"The NAS appliance is a shared file storage appliance. It provides file storage accessible over HTTP, NFS, and CIFS file protocols.
+<br><br>
+The NAS appliance serves files contained within a configured (pluggable) data volume thus providing the ability for the content served by the appliance to be changed easily as well as the ability for the volume to have varied sizes. For example, if NAS is being used to store log files, the data volume does not need to be as large as what may be needed to store content for an apache server.
+<br><br>
+The root directory of the volume is shared and the HTTP, NFS, and CIFS (samba) servers see the same volume, at the same root. The NFS server exposes the volume as a shared named /mnt/data. The CIFS server exposes the volume as a share named share. The root directory of the volume is accessible for read-only access by the HTTP server and for read-write access by the NFS and CIFS (samba) server.
+<br><br>
+The security for http access may be open (no user/pwd), fixed single user/pwd (from property) or from .htpasswd file stored within the root directory of the data volume.
+<br><br>
+The CIFS access is anonymous. It is assumed that only appliances that are allowed to access the volume are connected to the cifs terminal. This eliminates the need to configure complex security settings on the client and server and makes it possible to simply connect appliances that need file access to the cifs input.
+<br><br>
+There are three key use cases for the NAS appliance:
+<br><br>
+Serving large files over HTTP. The cifs interface is used to add/remove files (usually exported over a separate gateway)
+<br><br>
+As a shared file server through which other appliances/servers exchange files (fully internal to the application)
+<br><br>
+As a log server through which other appliances/servers store their log files so that those logs may be easily accessed/viewed by an administrator rather than having to log into each individual appliance.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatMiscNas.html"" target=""_blank"">NAS Appliance Documentation</a>
+<br><br>"
+Enabled,NASR - file server/NAS box with replication,CA Technologies - AppLogic Appliances,"The NASR appliance is a shared file storage appliance. It provides file storage accessible over HTTP, NFS, and CIFS file protocols as well as web interface for managing files. Additionally, two NASR appliances can be configured in a master-slave synchronization mode so that content on the master is replicated to the slave.
+<br><br>
+The NASR appliance serves files contained within a configured (pluggable) data volume thus providing the ability for the content served by the appliance to be changed easily as well as the ability for the volume to have varied sizes. For example, if NASR is being used to store log files, the data volume does not need to be as large as what may be needed to store content for an apache server.
+<br><br>
+The root directory of the volume is shared and the HTTP, NFS, and CIFS (samba) servers see the same volume, at the same root. The NFS server exposes the volume as a shared named /mnt/data. The CIFS server exposes the volume as a share named 'share'. The root directory of the volume is accessible for read-only access by the HTTP server and for read-write access by the NFS and CIFS (samba) server.
+<br><br>
+The CIFS access is anonymous. It is assumed that only appliances that are allowed to access the volume are connected to the cifs terminal. This eliminates the need to configure complex security settings on the client and server and makes it possible to simply connect appliances that need file access to the cifs input.
+<br><br>
+In its default configuration NASR serves as a regular NAS appliance. When configured, two NASR appliances can run in master-slave replication so that data on the master is kept replicated on the slave.
+<br><br>
+Replication is one way only, any changes on the slave are not replicated to the master. The replication is asynchronous and is triggered by file changes on the master's data volume. Data is replicated using rsync over its native protocol.
+<br><br>
+There are several key use cases for the NASR appliance:
+<br><br>
+Serving large files over HTTP. Files may be added through the file manager or via the cifs/nfs terminals.
+<br><br>
+As a shared file server through which other appliances/servers exchange files (fully internal to the application)
+<br><br>
+As a log server through which other appliances/servers store their log files so that those logs may be easily accessed/viewed by an administrator rather than having to log into each individual appliance.
+<br><br>
+As a replicated file storage (in any of the above cases) providing synchronized storage between two instances of an application (possibly running in different locations).
+<br><br>
+NASR provides provides GUI access to its data volume which allows easy management of the content while the appliance is running.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatMiscNasr.html"" target=""_blank"">NASR Appliance Documentation</a>
+<br><br>"
+Enabled,LOAD - Load Generator,CA Technologies - AppLogic Appliances,"LOAD is a load generator which generates HTTP requests on its out terminal.
+<br><br>
+Load generation is controlled through a simple web interface (GUI) exposed by LOAD. The GUI is accessed through the ctl terminal. The GUI also displays historical results of load generation.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatMiscLoad.html"" target=""_blank"">LOAD - Load Generator Documentation</a>
+<br><br>"
+Enabled,SQUID - SQUID Proxy,CA Technologies - AppLogic Appliances,"SQUID is a caching forward or reverse proxy appliance. SQUID acts as an agent, accepting HTTP requests from clients on its in terminal and passing them to the appropriate server connected to the out terminal. It stores a copy of the returned data in a memory and in an on-disk cache. When the same data is requested multiple times, cached data is returned to the client, speeding up access and decreasing source server load.
+<br><br>
+SQUID supports two modes of operation, proxy and web-accelerator. 
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatMiscSQUID.html"" target=""_blank"">SQUID - SQUID Proxy Documentation</a>
+<br><br>"
+Enabled,HALB - Session-aware HTTP Load Balancer ,CA Technologies - AppLogic Appliances,"HALB is a switch for distributing workload to multiple Web servers of the same or different type. HALB is based on the HAProxy TCP/HTTP load balancing software package; which is designed to be extremely fast while consuming little resources.
+<br><br>
+HALB performs load-balancing functions using several algorithms. It performs simple round-robin balancing, equalizing the load for backend servers. It also supports persistent sessions, binding the client to a particular backend web server with session cookies or by using the request source ip address as a key. While using session cookies, any new sessions that do not have session cookies are distributed using the round-robin algorithm. HALB supports sessions with multiple cookies and modifies and/or tracks only the necessary ones, leaving others intact. Any particular session or client may be tied to particular backend web server or application using cookie association. Existing cookies may be transparently modified by HALB for clients that do not support requests with multiple cookies.
+<br><br>
+HALB constantly monitors the health state of all backend web servers. The health state checks conducted by HALB may include a simple TCP connect check or a more complex HTTP request (specified on HALB's boundary). In the case of a server failure detected by HALB using the parameterized health check method, HALB switches the traffic to an alternate server. If the failed server eventually recovers, HALB may switch the traffic back to the recovered server.
+<br><br>
+HALB exposes a web service interface on its ctl terminal. This interface allows a user to programmically enable/disable output terminals out1 - out8 and also to retrieve the state of all terminals. This is useful in cases when there is some kind of backend failure (i.e., such as in a database or storage appliance) where the application itself can automatically disable traffic to a specific set of servers. Note that in this case, HALB itself is unable to detect this type of failure; so it is up to the application to detect the failure and disable the corresponding set of backend servers.
+<br><br>
+HALB maintains detailed statistics including backend state, number of requests processed per server, number of errors occured, etc. The statistics are reported through the mon terminal and separate counters are also exposed through the ui terminal as a GUI accessible with a browser.
+<br><br>
+HALB is designed to be extremely fast using very few resources. Under regular conditions, HALB consumes about 25KB of memory for every session, or 1GB for 40000 simultaneous sessions, and processes up to 6000 requests per second.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatSwitchesHalb.html"" target=""_blank"">HALB - Session-aware HTTP load balancer based on HA Proxy</a>
+<br><br>"
+Enabled,L3LB - TCP/UDP Load Balancer,CA Technologies - AppLogic Appliances,"L3LB is a switch for distributing incoming TCP/UDP sessions to servers of the same or different type. TCP load balancing functionality is based on the HAProxy TCP/HTTP load balancing software package; UDP load balancing is based on Netfilter.
+<br><br>
+L3LB load-balances the incoming traffic using several different algorithms. For TCP traffic L3LB performs simple round-robin load-balancing, equalizing the load for the backend servers. For TCP L3LB also supports persistent sessions, binding the client to a particular backend server by using the request source IP address as a key. For UDP traffic, L3LB uses the round-robin algorithm (this is the only algorithm available for UDP traffic).
+<br><br>
+L3LB constantly monitors the health state of all backend servers. While in TCP mode, the health state checks conducted by L3LB consist of a simple TCP connect check. In the case of a server failure detected by L3LB using the parameterized health check method, L3LB switches the traffic to an alternate server. If the failed server eventually recovers, L3LB may switch the traffic back to the recovered server. For UDP mode an ICMP PING is used to verify availability of a backend server.
+<br><br>
+L3LB exposes a web service interface on its ctl terminal. This interface allows a user to programmically enable/disable output terminals out1 - out8 and also to retrieve the state of all terminals. This is useful in cases when there is some kind of backend failure (i.e., such as in a database or storage appliance) where the application itself can automatically disable traffic to a specific set of servers. Note that in this case, L3LB itself is unable to detect this type of failure; so it is up to the application to detect the failure and disable the corresponding set of backend servers.
+<br><br>
+L3LB is designed to be extremely fast using very few resources. Under regular conditions, L3LB consumes about 25KB of memory for every session, or 1GB for 40000 simultaneous sessions, and processes up to 6000 requests per second.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatSwitchesL3LB.html"" target=""_blank"">L3LB - TCP/UDP Load Balancer Documentation</a>
+<br><br>"
+Enabled,PS8 - Scalable Port Switch,CA Technologies - AppLogic Appliances,"PS8 is a switch for distributing TCP and UDP traffic to different outputs depending on the incoming request's protocol and port number. PS8 is parameterized to recognize specific protocols and ports for requests received on its in terminal. The recognized incoming traffic is forwarded through the specified output terminal based upon PS8's parameterization. Optionally, the forwarded traffic's port may be overidden by PS8. For example, PS8 can be used to forward all incoming TCP traffic on port 80 through the out5 output terminal on port 8080.
+<Br><br>
+The switch is cascadable; incoming traffic that is not TCP, UDP or doesn't match the parameterized port numbers is forwarded through the aux terminal without modification. All incoming traffic received on the outX and aux terminals is forwarded back through the in terminal.
+<Br><br>
+PS8 is typically used to route incoming traffic to different appliances within an application.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatSwitchesPS8.html"" target=""_blank"">PS8 - Scalable Port Switch Documentation</a>
+<br><br>
+"
+Enabled,RPL - Event Replicator,CA Technologies - AppLogic Appliances,"RPL is a replicator for events. It replicates HTTP requests received on its input terminal to all its output terminals.
+<br><br>
+RPL sends any headers and documents received with the request to the outputs. RPL ignores the responses from the output requests, including possible failures to send the request. RPL always returns SUCCESS for recognized HTTP requests on its input, without waiting for any of the outputs to respond. For requests that require a document to be returned, RPL returns an empty document.
+<br><br>
+RPL is intended for distributing fire-and-forget asynchronous notifications. (Future versions of RPL may have additional parameterization that modifies its behavior, including aggregating the responses from outputs and returning them on the input).
+<br><br>
+RPL can tolerate, and indeed expects under normal circumstances, any of its outputs being unconnected or non-responsive. Appliances connected to RPL's outputs may be stopped, on standby or non-responsive, without this affecting the operation and performance of RPL.
+<br><br>
+RPL can be cascaded by connecting other RPL instances to one or more of RPL's outputs.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatSwitchesRpl.html"" target=""_blank"">RPL - Event Replicator Documentation</a>"
+Enabled,URLSW - URL Port Switch,CA Technologies - AppLogic Appliances,"URLSW is a switch which distributes HTTP requests to different outputs based on matching the request URI or request headers against rules, defined as regular expressions, on the appliance boundary. URLSW is used in applications that have more then one web or application server appliances to flexibly distribute HTTP requests among them. URLSW operates similar to it's counterpart PS8, but on a higher level - it analyzes HTTP requests instead of tcp/udp ports.
+<br><br>
+URLSW also has an embedded heath checker. Health checker periodically polls connected out terminals and determines whether the servers are ready to process requests. If any of checked servers becomes non-functional, URLSW automatically disables request flow for this server by redirecting request to other most appropriate ""live"" server. When previously non-operational server comes back alive it will be automatically detected by health checker and continues to receive requests.<br><br>
+The switch is cascadable; incoming traffic that does not match any defined regular expression is forwarded through the aux terminal without any modification. All incoming traffic received on the outX and aux terminals is forwarded back through the in terminal.
+<br><br>
+URLSW is typically used to route incoming traffic to different appliances within an application.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatSwitchesURLSW.html"" target=""_blank"">URLSW - URL Port Switch Documentation</a>
+<br><br>"
+Enabled,IN - Input gateway with firewall (iptables),CA Technologies - AppLogic Appliances,"IN is an input gateway that provides a firewalled entry point for network traffic into an application.
+<br><br>
+IN accepts all allowed incoming traffic on its external interface and passes it through its out terminal. IN forwards only the traffic explicitly allowed through configuration of its firewall properties; IN discards all disallowed traffic.
+<br><br>
+IN supports up to 4 incoming interfaces (protocol/pair combinations), such as http, ssh, etc. By default, IN allows only tcp port 80 (http).
+<br><br>
+IN is used to accept all network traffic for applications. All external traffic must pass through an IN gateway to access any resources or services within an application.
+<Br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>"
+Enabled,INSSLR - Redundant HTTP Input Gateway with SSL Support,CA Technologies - AppLogic Appliances,"The INSSLR appliance is a layer-7 gateway for secure HTTP requests. It converts the requests to unencoded HTTP requests. This can be used whenever it is necessary to support secure HTTP on the client's side, but the back-end processing infrastructure does not or cannot support SSL, including:
+<br><br>
+using a fast and light-weight HTTP server that does not have SSL support
+<br><br>
+using multiple back-end servers, for performance or for redundancy, connected through a load-balancing switch
+<br><br>
+using multiple back-end servers for unrelated functions, connected through a URL switch
+<br><br>
+offloading the SSL encryption/decryption to a separate server to improve throughput
+<br><br>
+If configured, INSSLR also supports client certificate authentication. In the case of SSL mutual authentication, both the client and server exchange their certificates and corresponding public keys. The client may contact the certificate authority (CA) which issued the server's certificate and confirm the certificate is authentic before proceeding. The server may do likewise.
+<br><br>
+In its default configuration INSSLR acts as a layer-7 gateway for secure HTTP requests, also providing firewalled entry point for network traffic into an AppLogic application, which can be configured with an Internet-accessible static IP address.
+<br><br>
+When configured, two INSSLR appliances can be used in failover mode to provide a redundant service. In this case, INSSLR IP address (configured via ip_addr) is running on only one of the nodes and is automatically transferred to the other INSSLR appliance in case of failure. At any given moment, only one of the INSSLR appliance is active. When running in failover mode INSSLR can be configured to run in several modes:
+<br><br>
+asymmetric - one of the appliances is primary and whenever it is online it takes over the IP address and becomes active. The backup appliance becomes active only if the primary node fails (or is stopped). Whenever the primary appliance becomes available again, it takes over the IP address and becomes active. The primary appliance is the one with the lowest IP address (string comparison) as set in the fover_local_ip property.
+<br><br>
+symmetric - both appliances are primary and whichever appliance starts first takes over the IP address and becomes active. The other appliance becomes active only if the first appliance fails (or is stopped). Whenever the first appliance becomes available again, it does not automatically take over the IP address.
+<br><br>
+When running in redundant mode, INSSLR provides an interface on its ctl terminal for:
+<br><br>
+forcing INSSLR to become primary
+<br><br>
+forcing INSSLR to become backup
+<br><br>
+check the state of INSSLR (primary/backup)
+<br><br>
+INSSLR constantly monitors the health state of the backend appliance connected to its http terminal. The health state checks conducted by INSSLR may include a simple TCP connect check or a more complex HTTP request (specified on INSSLR's boundary). In the case of a failure of the connected appliance, INSSLR reports an error to the grid dashboard or, if in redundant mode and configured to do so, it does a failover to the backup INSSLR appliance.
+<br><br>
+To support applications that need to appear at a single IP address for more than one service, INSSLR can be configured to direct non-HTTP traffic transparently to a separate output terminal. For such connections, the appliance acts as a layer-3 firewall/NAT router.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>"
+Enabled,OUT - Single host output gateway with firewall (iptables),CA Technologies - AppLogic Appliances,"OUT is an output gateway that provides access to a network host located outside of an application. OUT accepts traffic from the application on its in terminal and forwards it through its external interface to the remote host.
+<br><br>
+OUT has a firewall that allows only outgoing traffic (connections and datagrams); it drops incoming traffic that is not for an already established connection or related to a datagram request.
+<br><br>
+OUT passes all traffic to the remote host specified by the remote_host property. The remote host can be specified either as a DNS host name (e.g., www.3tera.com) or as an IP address in ""dots"" notation (e.g., 192.168.1.1). If the remote host is configured using a DNS name, the OUT gateway will ensure that if the name-to-IP mapping changes, the gateway will redirect its traffic to the new IP address.
+<br><br>
+OUT is used to access services outside of the application, such as an external database, web service or document repository. OUT is the only appliance in an application that needs to be configured with the name or IP address of the remote host; the remaining application components can access that host simply by being connected to the OUT appliance input.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/CatGatewayOut.html"" target=""_blank"">OUT: Single Host Output Gateway Appliance Documentation</a>
+<br><br>"
+Enabled,NET - Network output gateway with firewall (iptables),CA Technologies - AppLogic Appliances,"NET is an output gateway that provides outgoing access to a network outside of an application. NET accepts traffic from the application on its in terminal and forwards it through its external interface to the outside network (e.g., the Internet).<br><br>
+NET has a firewall that allows only outgoing traffic (connections and datagrams); it drops incoming traffic that is not for an already established connection or related to a datagram request. NET can be configured to further limit the set of IP addresses reachable through it.<br><br>
+NET serves as a default network gateway and DNS server for the appliance(s) connected to its in terminal. <br><br>
+ Only gateway output terminals should be connected to NET's in terminal.<br><br>
+NET is used for accessing services outside of an application whose host names are determined at runtime (e.g., mail server addresses obtained from MX DNS records or search engine bots that need to traverse the web).
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatGatewayNet.html"" target=""_blank"">NET - Network output gateway with firewall (iptables) Documentation</a>
+<br><br>"
+Enabled,VPN - Virtual Private Networking Appliance,CA Technologies - AppLogic Appliances,"VPN is a Virtual Private Networking appliance that operates in IPv4 and IPv6 networks, designed to provide secure and reliable tunnels for inter-grid communications as well as remote access to applications and appliances. VPN can also operate without using VPN tunnels, in which case it functions as a combined cleartext IN/OUT gateway. VPN may also be used to seamlessly interconnect IPv4 and IPv6 AppLogic grids. VPN is based on the OpenVPN, OpenSSH and Racoon open source software packages.
+<br><br>
+VPN has three basic modes of operation: server, client, and both.
+When operating as a server, traffic received through the external interface is sent through the srv terminal. If VPN is using a tunnel, traffic from the tunnel established over the external interface is decrypted prior to being forrwarded through the srv terminal. In this mode of operation, VPN operates as a IN gateway with VPN tunnel support.
+<br><br>
+When operating as a client, traffic received through the clt terminal is sent forwarded through the external interface. If VPN is using a tunnel, traffic is encrypted prior to being sent through the tunnel established over the external interface. In this mode of operation, VPN operates as an OUT gateway with VPN tunnel support.
+When operating as both a server and a client, both of the above traffic flows are supported providing for operation as a combined IN/OUT gateway.
+<br><br>
+VPN supports IPSec, shared secrets files, SSL certificates and ssh key files for authentication and encryption. A regular OpenVPN/OpenSSH client may be used on a remote workstation to connect to VPN, which in turn provides secure access to the internal components of an application running on AppLogic. The VPN appliance supports the generation of shared secrets files, SSL certificates and ssh keys.
+<br><br>
+In order to remotely access an AppLogic application over a secure VPN tunnel using VPN, the OpenVPN client-side software, or OpenSSH may be used on the client's machine (or some other compatible software).
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/CatGatewayVpn.html"" target=""_blank"">VPN - Virtual Private Networking Appliance Documentation</a>
+<br><br>"
+Enabled,MON - Application monitoring appliance,CA Technologies - AppLogic Appliances,"MON is an application monitoring appliance which collects performance and resource usage statistics (i.e., counters) from other appliances within an application. Appliances report their counters to MON through the mon terminal.<br><br>
+MON provides a visual interface via a web browser to access and view the appliance counters. Through the visual interface, the user creates views containing one or more graphs. Each graph displays one or more appliance counters. The visual interface is accessible through the following:<br><br>
+the AppLogic GUI<br><br>
+a ""Monitor"" button at the bottom of the Applications tab of the Dasboard<br><br>
+a monitor icon in the toolbar of the Application Editor
+through a gateway (i.e., IN or INSSL gateway) connected to the web terminal of MON<br><br>
+ Please see the Monitor Reference for additonal details on accessing and using the visual interface.<br><br>
+MON also supports background monitoring of appliance counters. All counters in a single view, as specified by the alarm_view property, are monitored in the background by MON. Whenever one of these counters falls below or exceeds a specified threshold, MON generates an alarm to the AppLogic Grid Controller, which posts a message to the dashboard. A browser to MON's visual interface does not have to be open in order for MON to monitor the appliance counters in the background.<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatMonitoringMon.html"" target=""_blank"">MON: Application Monitoring Appliance Documentation</a>
+<br><br>"
+Enabled,LUX5 - Generic Linux Appliance,CA Technologies - AppLogic Appliances,"LUX5 is a generic Linux-based appliance that can be used as a template for making new appliances.<br><br>
+The LUX5 server appliance is designed to be used in two ways:<br><br>
+As a customized appliance, by branching the LUX5 class to a singleton and modifying the class volume appropriately<br><br>
+As a template for building other appliances, by using it as a base to create new application-specific or global catalog classes.
+<br><br>
+If you need GCC and the ability to build software from source on the appliance, consider using the LINUX5 generic server appliance template instead of LUX.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatGenericLux.html"" target=""_blank"">LUX5, LUX64 - Gener<br><br>"
+Enabled,INSSL - HTTP gateway with SSL support,CA Technologies - AppLogic Appliances,"The INSSL appliance is a layer-7 gateway for secure HTTP requests. It converts the requests to unencoded HTTP requests. This can be used whenever it is necessary to support secure HTTP on the client's side, but the back-end processing infrastructure does not or cannot support SSL, including:<br><br>
+using a fast and light-weight HTTP server that does not have SSL support<br><br>
+using multiple back-end servers, for performance or for redundancy, connected through a load-balancing switch<br><br>
+using multiple back-end servers for unrelated functions, connected through a URL switch<br><br>
+offloading the SSL encryption/decryption to a separate server to improve throughput<br><br>
+INSSL provides a firewalled entry point for network traffic into an AppLogic application, which can be configured with an Internet-accessible static IP address.<br><br>
+To support applications that need to appear at a single IP address for more than one service, SSL can be configured to direct non-HTTP traffic transparently to a separate output terminal. For such connections, the appliance acts as a layer-3 firewall/NAT router.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatGatewayINSSL.html"" target=""_blank"">INSSL - HTTP Gateway with SSL support Documentation</a>
+<br><br>"
+Enabled,MYSQL64 - MySQL 64-bit database appliance,CA Technologies - AppLogic Appliances,"MYSQL is a database appliance based on the MySQL database engine (http://www.mysql.org). It provides an easy way to add a database to any application.<br><br>
+MYSQL stores the database on an application-defined volume that can be configured on each MYSQL instance. MYSQL automatically creates an empty database when it starts on an empty volume.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatDatabaseAppliancesMYSQLR.html"" target=""_blank"">MYSQLR, MYSQLR64 - MySQL Database Appliance Suitable for Replication Documentation</a>
+<br><br>"
+Enabled,PGSQL64 - PostgreSQL database appliance,CA Technologies - AppLogic Appliances,"PGSQL is not available in AppLogic 2.8+; please use PGSQL64 instead.<br><br>
+PGSQL is a database appliance based on the PostgreSQLdatabase engine (http://www.postgresql.org). It provides an easy way to add a database to any application. PGSQL is an enterprise-style database appliance that supports many features that are currently not supported by the MYSQLx appliances. Some of these features include stored procedures, triggers, views and user-defined data types.
+<br><br>
+PGSQL stores the database on an application-defined volume that can be configured on each PGSQL instance. PGSQL optionally creates an empty database when it starts on an empty volume. The PGSQL database volume cannot be shared among multiple PGSQL instances (one database volume per PGSQL instance).
+<br><br>
+PGSQL clients access the configured database through the in terminal. The database requests are processed and completed back through the same terminal. PGSQL allows any valid Postgres user to access the database through the in terminal (the appliance has one preconfigured superuser role: standard 'postgres'). PGSQL can be configured with the maximum number of concurrent connections supported through in.
+<br><br>
+PGSQL also has the ability to maintain a database log accessible through the log terminal. The log is useful for tracking database information and error logging. The log path, name, age and contents are configurable. In addition, various database statistics and debugging information may also be enabled to help with profiling database access patterns and diagnosing problems/errors.
+<br><br>
+PGSQL is typically used for either general purpose web database applications (small databases with a large number of users who execute simple queries) or decision-support databases (large databases with a small number of users who execute complex queries).
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatDatabaseAppliancesPGSQL64.html"" target=""_blank"">PGSQL64 - PostgreSQL Database Appliance Documentation</a>
+<br><br>"
+Enabled,WEB4 - Web server appliance,CA Technologies - AppLogic Appliances,"WEB4 is not available in AppLogic 2.8+; please use WEB5 or WEB64 instead.<br><br>
+WEB is a web server appliance based on the Apache open-source web server software (see http://httpd.apache.org).<br><br>
+WEB serves static web content and executes scripts from a user-configurable read-only content volume. The paths to the documents and scripts are configurable, so that the same volume can be shared between multiple web servers and/or other appliances serving different content.<br><br>
+WEB has three generic output terminals intended for accessing external services from scripts on the content volume. The db terminal is for accessing a MySQL database; the fs terminal is for accessing shared file storage (using NFS); and the aux terminal is for any auxiliary access (e.g., sending e-mail messages to a SMTP server).<br><br>
+The log terminal can be used to connect WEB to a shared file system on which WEB can store its logs.<br><br>
+The configuration of the web server is provided through properties. The properties are designed to cover the most uses in an easy-to-configure way and in most cases only a few need to be set to non-default values. Advanced configurations can be achieved through include files in the Apache configuration format, coming from the content volume. Access and options to content and script files can be further specialized through .htaccess files in the content directories.<br><br>
+If the features provided by the WEB appliance do not meet your needs, please contact our Technical Support to discuss the possible options. We may be able to extend the catalog by providing appliances that cover your needs.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatWebserversWebx4.html"" target=""_blank"">WEBx4 - Scalable Web Server Appliance Documentation</a>
+<br><br>"
+Enabled,MYSQLR - MySQL Database Appliance Suitable for Replication,CA Technologies - AppLogic Appliances,"MYSQLR is a database appliance based on the MySQL database engine (http://www.mysql.org). It provides an easy way to add a database to any application. The appliances can also be used in complex MYSQL replication scenarios. The appliances are based on MYSQL5 (CentOS 5.5/MySQL 5) but also handle database replication.
+<br><br>
+Database replication enables data from one MySQL database server (known as master) to be replicated to one or more MySQL database servers (known as slaves). The MYSQLR64 appliances can be setup for master-slave as well as master-master replication and replication with more than two masters.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatDatabaseAppliancesMYSQLR.html"" target=""_blank"">MYSQLR, MYSQLR64 - MySQL Database Appliance Suitable for Replication Documentation</a>
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>"
+Enabled,TOMCAT64 - Tomcat Application Servers,CA Technologies - AppLogic Appliances,"TOMCAT is web server appliance based on the Sun Java machine and Apache Tomcat, a Java Servlet and Java Server Pages container developed under the Apache License. The main documentation for Tomcat is at tomcat.apache.org. Tomcat provides standards-compliant support for Servlets and JSPs. Tomcat can work as standalone web server or as application server.
+<br><br>
+TOMCAT serves static web content, automatically deploys web applications, executes servlets and Java Server Pages from a user-configurable content volume. The paths to the documents are configurable, so that the same volume can be shared between multiple web servers and/or other appliances serving different content.
+<br><br>
+TOMCAT serves HTTP/1.1 and HTTP/1.0 protocol for web clients and AJP 1.3 for requests from front end servers (ex. Apache with mod_proxy_ajp).
+<br><br>
+Like WEBx servers, TOMCAT has three generic output terminals intended for accessing external services from scripts on the content volume. The db terminal is used for accessing a various databases; the fs terminal is used for accessing shared file storage (using NFS); and the aux terminal is created for sending e-mail messages to an SMTP server.
+<br><br>
+The log terminal should be used to connect TOMCAT to a shared file system where TOMCAT can store log files.
+<br><br>
+Configuration of the server is defined using various properties. These properties are designed to cover the most usage variants in an easy-to-configure way and in most cases only a few need to be set to a non-default values.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatDatabaseAppliancesMYSQLR.html"" target=""_blank"">TOMCAT, TOMCAT64: Application Servers Documentation</a>
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+"
+Enabled,LINUX64 - Generic Linux Servers,CA Technologies - AppLogic Appliances,"LINUX5 and LINUX64 are general server appliances. They may be branched to make new server appliances: singletons or server classes.
+<br><BR>
+Each one includes a reasonably complete installation of its OS, including the GCC compiler if available. This allows installing and building software on the branched appliances.
+<br><BR>
+The generic server appliances are designed to be used in two ways:
+<br><BR>
+As a customized server, by branching the base class to form singleton and modifying its class volume appropriately.
+<br><BR>
+As a template for building other server appliances, by using it as a base to create new application-specific or global catalog classes.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatGenericLinux.html"" target=""_blank"">LINUX5, LINUX64: Generic Linux Servers Documentation</a>
+<br><br>"
+Enabled,LUX64 - Generic Linux Appliance,CA Technologies - AppLogic Appliances,"LUX64 is a generic Linux-based appliance that can be used as a template for making new appliances.<br><br>
+The LUX64 server appliance is designed to be used in two ways:<br><br>
+As a customized appliance, by branching the LUX64 class to a singleton and modifying the class volume appropriately<br><br>
+As a template for building other appliances, by using it as a base to create new application-specific or global catalog classes.
+<br><br>
+If you need GCC and the ability to build software from source on the appliance, consider using the LINUX64 generic server appliance template instead of LUX.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatGenericLux.html"" target=""_blank"">LUX5, LUX64 - Generic Linux Appliance Documentation</a>
+<br><br>"
+Enabled,ROR - Ruby-on-Rails Application Server,CA Technologies - AppLogic Appliances,"ROR is a web server appliance based on the Ruby and Ruby-on-Rails web framework. The main documentation for Ruby-on-Rails is at http://wiki.rubyonrails.org. Ruby-on-rails lets you write beautiful code by favoring convention over configuration. Ruby-on-rails can work as standalone web server or as application server.
+<br><br>
+ROR serves static web content and automatically deploys web applications from a user-configurable content volume. The paths to the documents are configurable, so that the same volume can be shared between multiple web servers and/or other appliances serving different content.
+<br><br>
+ROR can operate in two different modes: Apache/mod_passenger or Apache/mongrel_cluster. Both Rails back-ends have their own advantages, thus, Phusion Passenger provides extremely high performance for Rails applications and hot re-deploy feature, but Mongrel has a time-proven production stability in his favor.
+<br><br>
+Like WEBx servers, ROR has three generic output terminals intended for accessing external services from scripts on the content volume. The db terminal is used for accessing a various databases; the fs terminal is used for accessing shared file storage (using NFS); and the aux terminal is created for sending e-mail messages to an SMTP server.
+<br><br>
+The log terminal should be used to connect ROR to a shared file system where ROR can store log files.
+<br><br>
+Configuration of the server is defined using various properties. These properties are designed to cover the most usage variants in an easy-to-configure way and in most cases only a few need to be set to a non-default values.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatApplicationServersROR.html"" target=""_blank"">ROR - Ruby-on-Rails Application Server Documentation</a>
+<br><br>"
+Enabled,JBOSS64 - JBoss Application Server,CA Technologies - AppLogic Appliances,"JBOSS is an application server appliance based on open source JBoss. JBOSS supports two separate versions of JBoss software:
+<br><br>
+JBoss AS 4.2.3: a Java EE 1.4 application server with embedded Apache Tomcat 6 and Enterprise JavaBeans 3.0 deployed by default
+JBoss AS 5.1.0: a Java EE 1.5 application server built on top of a new JBoss microcontainer.<br><br>
+JBOSS supports a number of advanced technologies and features:
+<br><br>
+Clustering<br>
+Load balancing and Failover (including sessions)<br>
+JSP/Servlet 2.1/2.5 (Tomcat)<br>
+Enterprise Java Beans version 3 and 2.1<br>
+JNDI (Java Naming and Directory Interface)<br>
+Hibernate-integration (for persistence programming; JPA)<br>
+Support for Java EE-Web Services like JAX-RPC (Java API for XML for Remote Procedure Call)<br>
+SAAJ (SOAP with Attachments API for Java)<br>
+JMS (Java Message Service) integration<br>
+JBOSS automatically deploys web applications from either a locally mounted content volume or a network filesystem accessible through the fs terminal. Several pre-configured execution environments, derived from the standard JBoss configurations, are available. The path to the application documents is configurable, so that the same volume can be shared between multiple web servers and other appliances serving different content.
+<br><br>
+JBOSS has three generic output terminals intended for accessing external services: The db terminal is for accessing various databases; the fs terminal is for accessing shared file storage (using NFS); and the aux terminal is for sending e-mail messages to an SMTP server.
+<br><br>
+The log terminal can be used to connect JBOSS to a shared file system on which JBOSS can store log files.
+<br><br>
+The configuration of the server is provided through properties. These properties are designed to cover most uses in an easy-to-configure way and in most cases only a few need to be set to non-default values.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatApplicationServersJBOSS.html"" target=""_blank"">JBOSS, JBOSS64: JBoss Application Server Documentation</a>
+<br><br>"
+Enabled,JBOSS - JBoss Application Server,CA Technologies - AppLogic Appliances,"JBOSS is an application server appliance based on open source JBoss. JBOSS supports two separate versions of JBoss software:
+<br><br>
+JBoss AS 4.2.3: a Java EE 1.4 application server with embedded Apache Tomcat 6 and Enterprise JavaBeans 3.0 deployed by default
+JBoss AS 5.1.0: a Java EE 1.5 application server built on top of a new JBoss microcontainer.<br><br>
+JBOSS supports a number of advanced technologies and features:
+<br><br>
+Clustering<br>
+Load balancing and Failover (including sessions)<br>
+JSP/Servlet 2.1/2.5 (Tomcat)<br>
+Enterprise Java Beans version 3 and 2.1<br>
+JNDI (Java Naming and Directory Interface)<br>
+Hibernate-integration (for persistence programming; JPA)<br>
+Support for Java EE-Web Services like JAX-RPC (Java API for XML for Remote Procedure Call)<br>
+SAAJ (SOAP with Attachments API for Java)<br>
+JMS (Java Message Service) integration<br>
+JBOSS automatically deploys web applications from either a locally mounted content volume or a network filesystem accessible through the fs terminal. Several pre-configured execution environments, derived from the standard JBoss configurations, are available. The path to the application documents is configurable, so that the same volume can be shared between multiple web servers and other appliances serving different content.
+<br><br>
+JBOSS has three generic output terminals intended for accessing external services: The db terminal is for accessing various databases; the fs terminal is for accessing shared file storage (using NFS); and the aux terminal is for sending e-mail messages to an SMTP server.
+<br><br>
+The log terminal can be used to connect JBOSS to a shared file system on which JBOSS can store log files.
+<br><br>
+The configuration of the server is provided through properties. These properties are designed to cover most uses in an easy-to-configure way and in most cases only a few need to be set to non-default values.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatApplicationServersJBOSS.html"" target=""_blank"">JBOSS, JBOSS64: JBoss Application Server Documentation</a>
+<br><br>"
+Enabled,MTA - Mail Transport Agent,CA Technologies - AppLogic Appliances,"MTA is a fast and secure mail appliance, based on Postfix MTA Server.
+<br><br>
+MTA has three generic output terminals intended for accessing external mail relays, remote storage and monitoring services. The net terminal is used to send e-mail messages to other MXes or to a Smart SMTP host. The log terminal can be used to connect MTA to a shared file system on which MTA can store its logs. The fs terminal is for accessing shared file storage (using NFS). The mon terminal is used for monitoring and statistics.
+<br><br>
+The configuration of MTA is provided through properties. The properties are designed to cover most uses in an easily configurable way. Typically, only a few need to be set to non-default values.
+<br><br>
+If the features provided by the MTA appliance do not meet your needs, contact our TechnicalSupport to discuss the possible options. We may be able to extend the catalog by providing appliances that cover your needs.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatMiscMta.html"" target=""_blank"">MTA - Mail Transport Agent Documentation</a>
+<br><br>"
+Enabled,ORACLE - ORACLE Database Appliance,CA Technologies - AppLogic Appliances,"ORACLE is a database appliance based on the Oracle Database Server 10g R2 Express Edition (http://www.oracle.com/technetwork/database/express-edition/overview/index.html). It provides an easy way to add a database to any application. ORACLE is an entry-level, small-footprint database that's free to develop, deploy, and distribute; and simple to administer. Oracle Database XE is a great starter database for:
+<br><br>
+Developers working on PHP, Java, .NET, XML, and Open Source applications<br>
+DBAs who need a free, starter database for training and deployment<br>
+Independent Software Vendors (ISVs) and hardware vendors who want a starter database to distribute free of charge<br>
+Educational institutions and students who need a free database for their curriculum<br>
+With Oracle Database XE, you can now develop and deploy applications with a powerful, proven, industry-leading infrastructure, and then upgrade when necessary without costly and complex migrations.
+<br><br>
+ORACLE stores the database on an application-defined volume that can be configured on each ORACLE instance. ORACLE creates an empty database instance when it starts on an empty volume. The ORACLE database volume cannot be shared among multiple ORACLE instances (one database volume per ORACLE instance).
+<br><br>
+ORALCE clients access the configured database through the in terminal. The database requests are processed and completed back through the same terminal. ORACLE allows any valid Oracle user to access the database through the in terminal (the appliance has two preconfigured superuser roles: standard 'SYSTEM' and 'SYS'). ORACLE can be configured with the maximum number of concurrent connections supported through in.
+<br><br>
+ORACLE also has the ability to maintain a database log accessible through the log terminal. The log is useful for tracking database information and error logging. In addition, various database statistics and debugging information may also be enabled to help with profiling database access patterns and diagnosing problems/errors.
+<br><br>
+Note: This appliance is distributed with AppLogic 3.0 and is not distributed from Cloud Commons Marketplace at this time.
+<br><br>
+<a href=""http://doc.3tera.com/AppLogic30/en/Catalog_Ref/index.htm?toc.htm?CatDatabaseAppliancesORACLE.html"" target=""_blank"">ORACLE: ORACLE Database Appliance Documentation</a>
+<br><br>"
+Enabled,Cloud Control Panel (CCP) 3.0,DNS Europe,"<p>Enhance the Cloud Service design, management and end-user control capabilities of your AppLogic infrastructure with our Cloud Control Panel (CCP) for CA AppLogic v3.x.  Building and managing cloud infrastructure and applications is something that CA AppLogic excels at.</p>
+<p>Now, with our CCP app, any CA AppLogic deployment can benefit from extended end-user control of templated Cloud Services including automated provisioning, on-demand resource changes and access to consumed resource data history – all through a simple web-based UI.</p>
+<p>Working with any application template built on AppLogic, the CCP provides Service Designers with the control to decide exactly how a Cloud Service is experienced by the end-user, including what permissions they have to control each component of the application infrastructure.</p>
+<p>The CCP includes both Ordering & Metering API features to allow you to integrate with external service management and billing systems.</p>
+<p>Note: The CCP application uses a built-in Oracle XE database appliance that is limited to 4GB of database storage, 1 (physical) CPU & 1GB RAM. For alternative Oracle licensing options, including unlimited size Embedded Standard Edition One, please contact DNS Europe.</p>"
+Enabled,VENE Legal Matter Management,Acolyst,"<p>Acolyst VENE Legal Matter Management application is for legal corporate and government professionals needing a tool to allow for collaboration, managing matter status and related objects, sharing notes, documents, assigning tasks, creating appointments, scheduling alerts and notification, workflow and approvals, and so much more.</p>
+<p>The objects revolve and relate to the Matter object record. For example, Tasks, Appointments, Documents, Emails, and Contacts are associated to a Matter project.</p>"
+Enabled,"CorePLUS MSOffice, Exchange and Adobe Reader PaaS ","CPW Group, Inc., dba CorePLUS T","<p><strong>Challenge:</strong></p>
+<p>Making cloud the answer for a business’s IT environment, requires more than the infrastructure. The infrastructure (IaaS) is the first step and the enabler for cloud services. The next step is the delivery of applications and that is more than silo application hosting. Organizations have multiple applications and devices, various user requirements and IT support to contend with.</p>
+<p>After the cloud infrastructure is decided upon, organizations are looking for the answer to “now what?”</p>
+<p><strong>Opportunity: </strong></p>
+<p>CorePLUS answers the question by providing a congruent service from its cloud management service platform to any device and gives organizations the ability to operate and manage their entire cloud IT environment.</p>
+<p>As an agnostic application delivery platform for SaaS applications and for a predictable monthly price per user, Customer’s simply log in and begin using CoreDesk with any windows, web-based, or multi-tier application delivered as a turnkey on demand service, available from anywhere and on any device. The cloud management solution that enables this service is a technology developed by CorePLUS called the CoreEngine (PaaS) that becomes the administration, deployment, provisioning, integration, and management of applications, devices and services.</p>
+<p><strong>Benefits:</strong></p>
+<p>CorePLUS’s solution eliminates the dependence on client-side equipment, software, and helpdesk personnel. CorePLUS essentially replaces the mundane tasks of an in-house IT department, freeing up staff for more important managerial and strategic IT roles.</p>
+<p>CorePLUS is dedicated to providing all of the capabilities of a Fortune 500 IT department to users of all sizes as a utility-style pay-only-for-what-you-use service model.</p>
+<p>For a predictable monthly price per user, users simply log in to the CoreGrid Infrastructure and begin using the CoreDesk centralized desktop from any device.</p>
+<p>CorePLUS is built upon a secure and instantly scalable grid infrastructure based CA’s 3Tera AppLogic. A client’s technical systems and information runs within a secure environment and the data is 100% secure. CorePLUS manages all security, virus prevention, and spam filtering. No more having to worry about repairing a crashed hard drive or virus infected system, needing to restore from a backup or worrying about protecting a company’s data from intruders; CorePLUS handles it all.</p>
+<p>CorePLUS enables businesses to “future-proof” their IT environment, while delivering applications directly to their employees from any location to any device. The CorePLUS platform allows businesses to centralize the administration, management, provisioning, development, and integration of applications and services in a private cloud environment.</p>"
+Enabled,Cloud Workshop - Fast Track Analysis,The Armada Group T,"<p>Cloud architectures and technologies (public and private) have reached a tipping point in maturity that every enterprise needs to consider the value for implementation. The key questions are:</p>
+<ul>
+<li>What I should move & NOT move to the cloud? </li>
+<li>How do I move to the cloud?</li>
+<li>What should I do first?</li>
+</ul>
+<p> </p>
+<p>The Fast Track Workshop answers these questions and puts you on a path to actionable projects that deliver measurable business value. We combine customer’s knowledge of business, infrastructure and operation with experiences of Armada consultants, a knowledgebase of architecture patterns and vendor/provider solution profiles.</p>
+<p> </p>
+<p><strong>Value Chain</strong></p>
+<p>The resulting solutions are focused on delivering value because the Workshop follows a value-chain that links business drivers directly to a solution and execution framework.</p>
+<p><strong><em>Drivers</em></strong> - the pain points, needs, objectives and desired benefits for change that determine the highest priority needs of the organization. </p>
+<p><strong><em>IT Impacts</em></strong> - The IT initiatives that need to occur and how are they prioritized.</p>
+<p><strong><em>Capability</em></strong> - the knowledge, skills and resources the organization has to complete these initiatives</p>
+<p><strong><em>Execution Framework</em></strong><strong> </strong>– comes from comparing prioritized initiatives and capabilities.</p>
+<p><strong>Analysis Framework</strong></p>
+<p>Armada's ""Cloud Evaluation Framework (CEF)"" is a collection of tools and methods that defines all aspects of an architectural change. It gathers information designed to answer the detailed questions before deploying an application to a public cloud.  The CEF is also a critical input to the development of private cloud architecture.</p>
+<p>The framework covers six major categories.</p>
+<p><strong><em>Workload</em></strong></p>
+<p>A profile of the usage & performance of the application over a period of time. It is a technical representation of the business demand/drivers for IT resources.</p>
+<p><strong><em>Architecture</em></strong></p>
+<p>A analysis of the design of the infrastructure and applications to determine to identify if you can technically take advantage of cloud architecture, and/or how much work would be needed to achieve the value.</p>
+<p><strong><em>Financial</em></strong></p>
+<p>The entire cost and benefit analysis for the application from current state to target end-state.  The financial model considers:</p>
+<ul>
+<li>Initial Investment</li>
+<li>Operating costs</li>
+<li>Opportunity cost </li>
+<li>Cost avoidance</li>
+<li>Cost of features you are getting from the new architecture (and paying for) that you do not need.</li>
+</ul>
+<p><strong><em>Risk</em></strong></p>
+<p>The key areas you need to provision for in adopting the new architecture;</p>
+<ul>
+<li>Contractual</li>
+<li>Business</li>
+<li>Technical</li>
+<li>Implementation</li>
+<li>Resource</li>
+<li>Organizational</li>
+<li>External</li>
+</ul>
+<p><strong><em>Operations </em></strong></p>
+<p>What are the impacts on the people, process and tools used to deliver IT services. Some key areas include;</p>
+<ul>
+<li>Deployment, Testing, Change Management</li>
+<li>Capacity Management, Performance</li>
+<li>Tools Integration, Automation</li>
+<li>Availability, Business Continuity, Architecture</li>
+</ul>
+<p><strong><em>Security </em></strong></p>
+<p>The requirements of the application and the data it uses - the most closely scrutinized aspect of cloud today.</p>
+<p>Primary topics include;</p>
+<ul>
+<li>Jurisdiction</li>
+<li>Compliance/Certification (FISMA, DIACAP , HIPAA, HITECH or PCI to GLBA etc..)</li>
+<li>Privacy</li>
+<li>Regulation</li>
+<li>Design/Architecture</li>
+</ul>
+<p> </p>
+<p><strong>Duration</strong></p>
+<p>Each workshop is customized to meet deliver the maximum value to each customer’s business requirement. It is an intensive, interactive working session that leverages the knowledge of customer’s staff and consultant’s experience.</p>
+<p>In additional to the value chain, a typical workshop includes topics like:</p>
+<ul>
+<li>What is the value of the Cloud?</li>
+<li>Cloud Market Analysis </li>
+<li>Common Architectural Patterns</li>
+<li>How to Calculate ROI/Business Case</li>
+</ul>
+<p> </p>
+<p><strong>Snapshot</strong></p>
+<p>In preparation for each workshop an online conference is schedule to understand the customer’s environment. A customer can choose to participate in this call and receive a Snapshot Report at no cost. The Snapshot Report includes a brief analysis of how cloud architectures can deliver benefit for a customers specific business drivers.</p>"
+Enabled,Cloud Snapshot - Fast Track Snapshot,The Armada Group T,"<p class=""Body"">Cloud has reached a tipping point. Every enterprise needs to consider the value of adoption. The key questions are;</p>
+<ul>
+<li>Why should I consider cloud?</li>
+<li>What applications are best suited?</li>
+<li>How do I adopt cloud architectural solutions?</li>
+</ul>
+<p class=""Body""> </p>
+<p class=""Body"">Avoid endless presentation on “<strong>What is a Cloud</strong>?” and other philosophical discussion. The Fast Track Methodology answers the Why, What and How questions and puts you on a path to actionable projects that deliver measurable business value. As an agile method it combines customer’s knowledge of business, infrastructure and operations with experienced Armada consultants, a knowledgebase of architecture patterns and vendor/provider solution profiles.</p>
+<p class=""Body""> </p>
+<p class=""Body""><strong>Value Chain</strong></p>
+<p class=""Body"">The resulting solutions are focused on delivering value because the snapshot follows a value-chain that links business drivers directly to a solution and execution framework.</p>
+<p class=""Body""><strong><em>Drivers</em></strong> - the pain points, needs, objectives and desired benefits for change that determine the highest priority needs of the organization.</p>
+<p class=""Body""><strong><em>IT Impacts</em></strong> - The IT initiatives that need to occur and how are they prioritized.</p>
+<p class=""Body""><em><strong>Capability</strong> </em>- the knowledge, skills and resources the organization has to complete these initiatives</p>
+<p class=""Body""><em><strong>Execution Framework</strong></em> – comes from comparing prioritized initiatives and capabilities.</p>
+<p class=""Body""> </p>
+<p class=""Body""><strong>Snapshot</strong></p>
+<p class=""Body"">Starting with discussion on customers background and business drivers the Snapshot delivers a framework for developing a business case or justification to begin the adoption of cloud computing architectures.</p>
+<p class=""Body"">The biggest challenge to getting started is rationalizing the huge volume of marketing on the value of cloud computing with the tactical needs of business and the constraints of legacy applications and infrastructure.</p>
+<p class=""Body"">The Snapshot starts this process by identifying the trigger events that describe the most critical business drivers. Using scenario analysis and the knowledge of organizational data we can then select possible adoption strategies and create a fast track for implementation.</p>
+<p class=""Body""> </p>
+<p class=""Body""><strong>Duration</strong></p>
+<p class=""Body"">The Snapshot is designed to be performed as a one or two hour conference call with key business owners and Armada consultants.</p>"
+Enabled,Cloud Ascent Program - Bronze,Cirrhus9 T,"<p>What CAP Bronze provides:</p>
+<ul>
+<li>An analysis of the customer’s IT Strategy and how moving to the Cloud can provide their company with significant technology advantages</li>
+<li>A roadmap and strategy for implementation of a best practice cloud environment.</li>
+<li>Target processes and underlying systems are evaluated for their suitability, cost and migration impact and results are put into a full migration tactical scorecard.</li>
+</ul>
+<p>The Bronze package includes full cloud assessment of your current environment. A no cost 30-minute phone consultation is available.</p>"
+Enabled,Cloud Ascent Program - Silver,Cirrhus9 T,"<p>What CAP Silver provides:</p>
+<ul>
+<li>An analysis of the customer’s IT Strategy and how moving to the Cloud can provide their company with significant technology advantages</li>
+<li>A roadmap and strategy for implementation of a best practice cloud environment.</li>
+<li>Target processes and underlying systems are evaluated for their suitability, cost and migration impact and results are put into a full migration tactical scorecard.</li>
+</ul>
+<p>The Silver package includes cloud assessment and migration of an application as a POC. A no cost 30-minute phone consultation is available.</p>"
+Enabled,Cloud Ascent Program - Gold,Cirrhus9 T,"<p>What CAP Gold provides:</p>
+<ul>
+<li>An analysis of the customer’s IT Strategy and how moving to the Cloud can provide their company with significant technology advantages</li>
+<li>A roadmap and strategy for implementation of a best practice cloud environment.</li>
+<li>Target processes and underlying systems are evaluated for their suitability, cost and migration impact and results are put into a full migration tactical scorecard.</li>
+</ul>
+<p>The Gold package includes cloud assessment and migration of multi-tiered application as a POC. A no cost 30-minute phone consultation is available.</p>"
+Enabled,CA Process Automation Microsoft Windows Cloud Appliance for MSPs,CA Technologies - Virtualization & Automation,"CA Process Automation is designed to speed the delivery of IT services while helping to remove manual errors. By defining, automating and orchestrating processes across organizational silos that use disparate systems, CA Process Automation helps improve productivity while also enforcing standards.
+
+With CA Process Automation, you can automate IT processes that span multiple organizations and systems, reduce the time it takes to deliver services, and enforce standards and compliance policies across departments 
+
+CA Process Automation helps you automate IT processes to:
+Reduce operational expenses Increase staff productivity Speed IT service delivery Improve service quality Enforce compliance polices
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Service Desk Manager Cloud Appliance for MSPs 10 Users,CA Technologies - Virtualization & Automation,"<p class=""Body"">IT is part of almost everything a business does these days, whether that’s supporting internal processes or servicing their customers. When IT services are unavailable, the impact can be costly and damaging.  With the proliferation of IT throughout the business comes an increase in incident volumes to the Service Desk, but not necessarily with a corresponding increase in staff.  One way to solve this conundrum is by empowering the end-users to solve their own problems. </p>
+<p class=""Body"">Unlike the competition, CA Service Desk Manager offers Support Automation so end-users can resolve their own issues without having to follow cumbersome step-by-step instructions by using knowledge article scripts. Only CA enables support staff to remotely diagnose and resolve desktop issues behind the scenes, so users can remain productive while their issues are being resolved.  Analysts can also engage in chat sessions with end-users to enable more efficient problem-solving.  All activity is automatically captured in the audit log for the incident or request.</p>
+<p>CA Service Desk Manager leads the market with 15 certified ITIL v3 processes, as verified through the PinkVERIFY toolset 3.1, and the Office of Government Commerce ITIL Software Scheme (OGC ISS).</p>
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,Microsoft Windows Server 2008 for CA Process Automation Cloud Appliances,CA Technologies - Virtualization & Automation,This item is required by the CA Process Automation Microsoft Windows Cloud Appliance for MSPs and is bundled with it.  This item may not be purchased separately.
+Enabled,Microsoft SQL Server for CA Process Automation Cloud Appliances,CA Technologies - Virtualization & Automation,This item is required by the CA Process Automation Microsoft Windows Cloud Appliance for MSPs and is bundled with it.  This item may not be purchased separately.
+Enabled,ScaleUp INSSLRNET Appliance,ScaleUp Cloud Technologies GmbH T,"This is a combined Gateway Appliance, functioning as a standard INSSLR and also a NET Appliance."
+Enabled,GigaSpaces XAP AppLogic Appliance,GigaSpaces Technologies,"<p class=""Body""><strong>GigaSpaces XAP AppLogic Appliance</strong> provides a solution for end-to-end scalability of the application and its data under extreme latency and load requirements, using a unique in-memory stack.</p>
+<p class=""Body"">XAP is a consolidated platform  that couples our In-Memory Data Grid with a full Elastic Application Platform for complete application scalability, from the load balancer down to the database. As a single product solution, XAP provides the joint benefits of increased performance and cost reduction.</p>
+<p><br />XAP is designed to meet the mission-critical needs of a wide range of businesses, with advanced monitoring and management capabilities, high-level automation of operations, cloud readiness that supports private, public, or hybrid architectures, and complete interoperability: XAP provides a solution for scalability in any environment, language, and API, without dictating a specific development framework or environment.<span id=""mce_marker""> </span></p>"
+Enabled,CA EEM for Service Desk Manager Cloud Appliances,CA Technologies - Virtualization & Automation,NA
+Enabled,CA Business Intelligence for Service Desk Manager Cloud Appliances,CA Technologies - Virtualization & Automation,Not applicable
+Enabled,Microsoft Windows Server 2008 for Service Desk Manager Cloud Appliances,CA Technologies - Virtualization & Automation,Not applicable
+Enabled,Microsoft SQL Server for CA Service Desk Manager Cloud Appliances,CA Technologies - Virtualization & Automation,Not Applicable
+Enabled,Microsoft Windows Server 2008 for CA Oblicore Guarantee Appliances,CA Technologies - Virtualization & Automation,Not Applicable
+Enabled,Oracle 11g Database for CA Oblicore Guarantee Appliances,CA Technologies - Virtualization & Automation,Not Applicable
+Enabled,Microsoft Windows Server 2008 for CA Service Catalog Cloud Appliances,CA Technologies - Virtualization & Automation,Not Applicable
+Enabled,Microsoft SQL Server for CA Service Catalog Cloud Appliances,CA Technologies - Virtualization & Automation,Not Applicable
+Enabled,CA Service Catalog Cloud Appliance for MSPs 250 Employees ,CA Technologies - Virtualization & Automation,"CA Service Catalog is designed to define and publish business and IT services and gain financial insight. CA Service Catalog enables your organization to define its service offerings in business terms. These service definitions can include any number of text or graphical descriptions. Services are published throughout the company or to individual business units via permission controls. A built-in workflow orchestration engine automates the delivery of services across physical, virtual, and cloud environments. Fixed or usage-based pricing can be added with just a couple of mouse clicks to provide financial transparency. A billing engine automatically associates service usage to departments, cost centers, and customers, and can even send out invoices for cost recovery if desired, and request Service Level Agreements (SLAs) enable you to set expectations and track service fulfillment commitments.
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license.
+"
+Enabled,CA Service Catalog Cloud Appliance for MSPs 500 Employees ,CA Technologies - Virtualization & Automation,"CA Service Catalog is designed to define and publish business and IT services and gain financial insight. CA Service Catalog enables your organization to define its service offerings in business terms. These service definitions can include any number of text or graphical descriptions. Services are published throughout the company or to individual business units via permission controls. A built-in workflow orchestration engine automates the delivery of services across physical, virtual, and cloud environments. Fixed or usage-based pricing can be added with just a couple of mouse clicks to provide financial transparency. A billing engine automatically associates service usage to departments, cost centers, and customers, and can even send out invoices for cost recovery if desired, and request Service Level Agreements (SLAs) enable you to set expectations and track service fulfillment commitments.
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license.
+"
+Enabled,CA ARCserve D2D Cloud Appliance for MSPs 5 Instances,CA Technologies,"CA ARCserve D2D provides fast and easy backup to disk and is the only Windows-based backup solution that offers infinite, incremental (I2) backups and bare-metal restore—including to dissimilar hardware. This new backup methodology changes how backups are performed to significantly reduce backup and restore times and eliminate the inherent risks of tape devices and media. It also enables faster and more granular recovery points—up to every 15 minutes—speeding data recovery, either from local data on disk or remote data stored in the cloud. Centralized deployment, management and reporting reduce implementation and management effort and provide status information to you for increased peace of mind. The new CA ARCserve® Central Host-Based VM Backup application for VMware virtual servers simplifies protection of all virtual servers on a physical host while the new CA ARCserve Central Virtual Standby application provides near-instantaneous recovery of any server as a VM. Companies that have an installed backup system can use CA ARCserve D2D to improve their recovery time.
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA ARCserve Backup Cloud Appliance for MSPs Primary and 7 Clients ,CA Technologies,"CA ARCserve Backup goes beyond backup, giving businesses highly reliable data protection with centralized management that makes sense, no matter how complex your data or IT infrastructure is. CA ARCserve Backup offers all this at a fraction of the cost of the competition. Reduce your backup storage by up to 95 percent and regain precious time with the only product that combines data deduplication; integrated backup copy to cloud storage; granular restore of applications such as Active Directory®, Microsoft Exchange and Microsoft SharePoint®; Infrastructure Visualization; and archiving—for both physical and virtual servers in a single package.1 Synthetic full backups reduce backup windows and integration with CA ARCserve D2D provides a single catalog to recover data, regardless of how it was backed up.
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA ARCserve RHA Cloud Appliance for MSPs 1 Master and 1 Replication ,CA Technologies,"CA ARCserve Replication, formerly known as CA XOsoft™ Replication, provides continuous data protection for Windows, Linux and UNIX systems on physical and virtual systems. You get an easy way to migrate and copy data between servers and locations, as well as between remote offices, and a central site for backup and archiving. It delivers local area network (LAN) and wide area network (WAN) continuous and periodic replication, whether on-premise, off-premise or in the cloud. You get Data Rewind for continuous data protection (CDP) to complement any periodic backup solution, helping to speed recovery and minimize data loss. Only CA ARCserve Replication offers offline synchronization, multi-stream replication, bandwidth throttling and multiple replication options to help balance network resources with your desired level of protection. 
+CA ARCserve High Availability, formerly known as CA XOsoft™ High Availability, includes all the features of CA ARCserve Replication and adds continuous system, application and data availability for your critical systems. It provides server and application monitoring, automatic and push-button failover and push-button failback to reduce risk to your sales, service, operations, employee productivity and reputation. Unlike other high-availability solutions, CA ARCserve High Availability does not require any cluster architecture or additional “witness servers,” responds to issues at the server and application levels and includes Data Rewind for CDP and automated, non-disruptive recovery testing to make sure that IT resources are available when they are needed. Only CA ARCserve High Availability offers offline synchronization to speed deployment with large Windows data sets and databases, and a unified, self-protecting, web-based management service. 
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license.
+"
+Enabled,Microsoft SQL Server for CA ARCserve Cloud Appliances,CA Technologies,Not Applicable
+Enabled,Microsoft Windows Server 2008 for ARCserve Cloud Appliances,CA Technologies,Not Applicable
+Enabled,CA Software Change Manager Cloud Appliance for MSPs 10 users,CA Technologies,"CA Software Change Manager (CA SCM) helps to provide effective management of the entire application development life cycle — providing process-based, business-driven change management to support diverse platforms and tools used by enterprises in today’s increasingly complex IT environments. In the bigger picture, it is an integral part of CA’s integrated Change and Configuration Management (CCRM) suite, which provides widely-used, proven solutions for product portfolio management, service desk and software delivery in addition to change management .CA provides robust, centralized, auditable solutions for developers working on both mainframe and distributed platforms. 
+
+Application development managers are faced with the dilemma of balancing priorities and risks associated with deploying new applications and maintaining existing systems as end-users continue to demand increasing levels of service and reliability. The deployment of commercial off-the-shelf (COTS) applications only increases the risk. In order to combat this risk and improve the development process, major organizations have begun to accept and implement industry standards for reliability such as the Software Engineering Institute’s (SEI) Capability Maturity Model (CMM, CMM-I), InformationTechnology Infrastructure Library (ITIL®), and the International Standards Organization (ISO) quality programs and initiatives. 
+As acceptance of these standards increases, the need for a strong process-driven approach to managing application development becomes immediately apparent. CA Software Change Management stands ready to help development organizations meet this challenge.
+CA Software Change Manager provides a proven and established yet evolving best practices-based solution for synchronizing application development activities between distributed and mainframe platforms. CA SCM helps enterprise organizations maximize resources, optimize processes and ensure alignment of IT.
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license.
+"
+Enabled,Microsoft Windows Server 2008 for CA Software Change Manager Cloud Apps,CA Technologies,NA
+Enabled,Microsoft SQL Server for CA Software Change Manager Cloud Apps,CA Technologies,Not Applicable
+Enabled,CA AppLogic,CA Technologies,"Using a catalog of virtual appliances, users compose and configure the applications and infrastructure once, then treat it as a single unit or virtual business service. The entire virtual business service is scaled automatically and can be instantly replicated or migrated to another data center if needed.
+CA AppLogic v3.0 supports both VMware ESX and Xen hypervisors in the same grid and offers a new OVF feature to increase ease of use by enabling users to import workloads from VMware or Xen.
+Designed for service providers and efficient enterprises, CA AppLogic v3.0 enables users to achieve far greater agility, scalability, ease of use and cost efficiency in cloud computing than previously possible.
+
+AppLogic is sold on a per socket/processor basis."
+Enabled,CA Oblicore Guarantee Appliance for MSPs 10 Contracts,CA Technologies - Virtualization & Automation,"CA Oblicore Guarantee takes a top-down approach to SLM leveraging standard service descriptions to rapidly create IT-business agreements and obligations. The solution then aggregates and correlates operational data from your existing tools to monitor performance against business-relevant metrics. A comprehensive, scalable platform helps your enterprise manage service level obligations for underpinning contracts (UPCs), service level agreements (SLAs) and operational level agreements (OLAs).
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Oblicore Guarantee Appliance for MSPs 25 Contracts,CA Technologies - Virtualization & Automation,"CA Oblicore Guarantee takes a top-down approach to SLM leveraging standard service descriptions to rapidly create IT-business agreements and obligations. The solution then aggregates and correlates operational data from your existing tools to monitor performance against business-relevant metrics. A comprehensive, scalable platform helps your enterprise manage service level obligations for underpinning contracts (UPCs), service level agreements (SLAs) and operational level agreements (OLAs).
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Oblicore Guarantee Appliance for MSPs 50 Contracts,CA Technologies - Virtualization & Automation,"CA Oblicore Guarantee takes a top-down approach to SLM leveraging standard service descriptions to rapidly create IT-business agreements and obligations. The solution then aggregates and correlates operational data from your existing tools to monitor performance against business-relevant metrics. A comprehensive, scalable platform helps your enterprise manage service level obligations for underpinning contracts (UPCs), service level agreements (SLAs) and operational level agreements (OLAs).
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Service Desk Manager Cloud Appliance for MSPs 15 Users,CA Technologies - Virtualization & Automation,"<p class=""Body"">IT is part of almost everything a business does these days, whether that’s supporting internal processes or servicing their customers. When IT services are unavailable, the impact can be costly and damaging.  With the proliferation of IT throughout the business comes an increase in incident volumes to the Service Desk, but not necessarily with a corresponding increase in staff.  One way to solve this conundrum is by empowering the end-users to solve their own problems. </p>
+<p class=""Body"">Unlike the competition, CA Service Desk Manager offers Support Automation so end-users can resolve their own issues without having to follow cumbersome step-by-step instructions by using knowledge article scripts. Only CA enables support staff to remotely diagnose and resolve desktop issues behind the scenes, so users can remain productive while their issues are being resolved.  Analysts can also engage in chat sessions with end-users to enable more efficient problem-solving.  All activity is automatically captured in the audit log for the incident or request.</p>
+<p>CA Service Desk Manager leads the market with 15 certified ITIL v3 processes, as verified through the PinkVERIFY toolset 3.1, and the Office of Government Commerce ITIL Software Scheme (OGC ISS).</p>
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Service Desk Manager Cloud Appliance for MSPs 25 Users,CA Technologies - Virtualization & Automation,"<p class=""Body"">IT is part of almost everything a business does these days, whether that’s supporting internal processes or servicing their customers. When IT services are unavailable, the impact can be costly and damaging.  With the proliferation of IT throughout the business comes an increase in incident volumes to the Service Desk, but not necessarily with a corresponding increase in staff.  One way to solve this conundrum is by empowering the end-users to solve their own problems. </p>
+<p class=""Body"">Unlike the competition, CA Service Desk Manager offers Support Automation so end-users can resolve their own issues without having to follow cumbersome step-by-step instructions by using knowledge article scripts. Only CA enables support staff to remotely diagnose and resolve desktop issues behind the scenes, so users can remain productive while their issues are being resolved.  Analysts can also engage in chat sessions with end-users to enable more efficient problem-solving.  All activity is automatically captured in the audit log for the incident or request.</p>
+<p>CA Service Desk Manager leads the market with 15 certified ITIL v3 processes, as verified through the PinkVERIFY toolset 3.1, and the Office of Government Commerce ITIL Software Scheme (OGC ISS).</p>
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Software Change Manager Cloud Appliance for MSPs 20 users,CA Technologies,"CA Software Change Manager (CA SCM) helps to provide effective management of the entire application development life cycle — providing process-based, business-driven change management to support diverse platforms and tools used by enterprises in today’s increasingly complex IT environments. In the bigger picture, it is an integral part of CA’s integrated Change and Configuration Management (CCRM) suite, which provides widely-used, proven solutions for product portfolio management, service desk and software delivery in addition to change management .CA provides robust, centralized, auditable solutions for developers working on both mainframe and distributed platforms. 
+
+Application development managers are faced with the dilemma of balancing priorities and risks associated with deploying new applications and maintaining existing systems as end-users continue to demand increasing levels of service and reliability. The deployment of commercial off-the-shelf (COTS) applications only increases the risk. In order to combat this risk and improve the development process, major organizations have begun to accept and implement industry standards for reliability such as the Software Engineering Institute’s (SEI) Capability Maturity Model (CMM, CMM-I), InformationTechnology Infrastructure Library (ITIL®), and the International Standards Organization (ISO) quality programs and initiatives. 
+As acceptance of these standards increases, the need for a strong process-driven approach to managing application development becomes immediately apparent. CA Software Change Management stands ready to help development organizations meet this challenge.
+CA Software Change Manager provides a proven and established yet evolving best practices-based solution for synchronizing application development activities between distributed and mainframe platforms. CA SCM helps enterprise organizations maximize resources, optimize processes and ensure alignment of IT.
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,CA Software Change Manager Cloud Appliance for MSPs 30 users,CA Technologies,"CA Software Change Manager (CA SCM) helps to provide effective management of the entire application development life cycle — providing process-based, business-driven change management to support diverse platforms and tools used by enterprises in today’s increasingly complex IT environments. In the bigger picture, it is an integral part of CA’s integrated Change and Configuration Management (CCRM) suite, which provides widely-used, proven solutions for product portfolio management, service desk and software delivery in addition to change management .CA provides robust, centralized, auditable solutions for developers working on both mainframe and distributed platforms. 
+
+Application development managers are faced with the dilemma of balancing priorities and risks associated with deploying new applications and maintaining existing systems as end-users continue to demand increasing levels of service and reliability. The deployment of commercial off-the-shelf (COTS) applications only increases the risk. In order to combat this risk and improve the development process, major organizations have begun to accept and implement industry standards for reliability such as the Software Engineering Institute’s (SEI) Capability Maturity Model (CMM, CMM-I), InformationTechnology Infrastructure Library (ITIL®), and the International Standards Organization (ISO) quality programs and initiatives. 
+As acceptance of these standards increases, the need for a strong process-driven approach to managing application development becomes immediately apparent. CA Software Change Management stands ready to help development organizations meet this challenge.
+CA Software Change Manager provides a proven and established yet evolving best practices-based solution for synchronizing application development activities between distributed and mainframe platforms. CA SCM helps enterprise organizations maximize resources, optimize processes and ensure alignment of IT.
+
+This offering is limited to a one year term and may be available for a single upfront payment or 12 monthly payments as set forth herein.  This offering does NOT include a perpetual license."
+Enabled,ScaleUp INNET Appliance,ScaleUp Cloud Technologies GmbH T,"This is a combined Gateway Appliance, functioning as a standard IN and also a NET Appliance."
+Enabled,OpenGeo Suite 2.4,"Skygone, Inc. T","<p>The OpenGeo Suite is a complete web mapping platform, comprised of multiple components working together in a flexible architecture. PostGIS reliably stores your geospatial information. GeoServer robustly serves your data through open formats and transforms them into maps. GeoWebCache accelerates delivery of map tiles. GeoExt (built on OpenLayers and Ext JS) helps you build powerful mapping applications in your browser.</p>
+<p>With an integrated spatial database, application server, and client API, the OpenGeo Suite contains everything you need to publish geospatial data and maps.</p>
+<p>The OpenGeo Suite also includes helpful web-based applications that leverage the GeoExt API. GeoExplorer composes map layers into web-based interactive applications. Styler styles map layers in a graphical interface. GeoEditor directly edits map features and data. All of these applications run completely in the browser, bringing the power of desktop GIS to the web.</p>"
+Enabled,CA Process Automation Connector for CA CMDB ,CA Technologies - Virtualization & Automation,"<p>The CA Process Automation Connector for CA CMDB makes using CMDB data to trigger or control automated IT processes simple, easy, and fast.  With data driven IT processes, IT can transform IT by reducing costs across IT while simultaneously increasing quality and delivery speed of IT services.</p>"
+Enabled,CA Process Automation Connector for CA eHealth,CA Technologies - Virtualization & Automation,"<p>CA Process Automation Connector for CA eHealth ® makes integration with and orchestration of CA eHealth ® easy, straightforward, and quick.  When CA eHealth is integrated into automated IT processes, incidents can be automatically remediated saving time and improving SLAs.  Furthermore, incidents can be automatically enriched, change requirements satisfied more quickly, and data collection for problem management more consistently collected.  In short, IT becomes better while delivering and managing IT becomes easier and less costly.</p>"
+Enabled,CA Process Automation Connector for CA Workload Automation AE r11,CA Technologies - Virtualization & Automation,"<p>The CA AutoSys® Connector for CA Process Automation makes integration and orchestration of CA Unicenter® AutoSys® easy, straightforward, and quick so IT can integrate workload automation with other steps in an end to end IT process.</p>
+<p> </p>
+<p>The Unicenter® AutoSys® connector supports Unicenter® AutoSys® JM release 11.0, 11.1 and 11.2.</p>"
+Enabled,CA Process Automation Connector for CA Workload Automation AE r11.3,CA Technologies - Virtualization & Automation,"<p>The CA AutoSys® Connector for CA Process Automation makes integration and orchestration of CA Unicenter® AutoSys® easy, straightforward, and quick so IT can integrate workload automation with other steps in an end to end IT process.</p>
+<p> </p>
+<p>The Unicenter® AutoSys® connector supports Unicenter® AutoSys® r11.3</p>"
+Enabled,CA Process Automation MSP Connector for Amazon Web Services,CA Technologies - Virtualization & Automation,"<p>The Amazon Web Service® Connector for CA Process Automation makes integration and orchestration of Amazon Web Service easy, straightforward, and quick so IT can integrate cloud resources with other steps in an end to end IT process. Some of the IT processes that can be readily automated with the Amazon Web Service Connector includes single and multiple cloud bursting  for flexible capacity and automation of capacity on demand which is triggered by events like service catalog orders, demand spikes, and capacity trends.</p>"
+Enabled,CA Process Automation MSP Connector for BMC Remedy,CA Technologies - Virtualization & Automation,"The BMC Remedy® Connector for CA Process Automation makes integration and orchestration of BMC Remedy easy, straightforward, and so IT can improve the return of their investments in BMC service desk technology and ITIL oriented processes."
+Enabled,CA Process Automation MSP Connector for IBM i5/OS,CA Technologies - Virtualization & Automation,"The IBM i5/OS® Connector for CA Process Automation makes integration and orchestration easy, straightforward, and quick so IT can automate maintenance tasks associated with IBM i5/OS."
+Enabled,CA Process Automation MSP Connector for Microsoft Hyper-V,CA Technologies - Virtualization & Automation,"The Microsoft Hyper-V® Connector for CA Process Automation makes integration with and orchestration of the Microsoft Hyper-V platform easy, straightforward, and quick so IT can manage at the speed of business their virtualized environments."
+Enabled,CA Process Automation MSP Connector for VMware vSphere,CA Technologies - Virtualization & Automation,"The CA Vmware vSphere® Connector for CA Process Automation makes integration with and orchestration of the Vmware vSphere platform easy, straightforward, and quick so IT can manage at the speed of business their virtualized environments."
+Enabled,CA Process Automation Connector for Amazon Web Services,CA Technologies - Virtualization & Automation,"<p>The Amazon Web Service® Connector for CA Process Automation makes integration and orchestration of Amazon Web Service easy, straightforward, and quick so IT can integrate cloud resources with other steps in an end to end IT process.</p>
+<p>Some of the IT processes that can be readily automated with the Amazon Web Service Connector includes single and multiple cloud bursting  for flexible capacity and automation of capacity on demand which is triggered by events like service catalog orders, demand spikes, and capacity trends.</p>"
+Enabled,CA Process Automation Connector for BMC Remedy,CA Technologies - Virtualization & Automation,"The BMC Remedy® Connector for CA Process Automation makes integration and orchestration of BMC Remedy easy, straightforward, and so IT can improve the return of their investments in BMC service desk technology and ITIL oriented processes."
+Enabled,CA Process Automation Connector for IBM i5/OS ,CA Technologies - Virtualization & Automation,"The IBM i5/OS® Connector for CA Process Automation makes integration and orchestration easy, straightforward, and quick so IT can automate maintenance tasks associated with IBM i5/OS."
+Enabled,CA Process Automation Connector for Microsoft Hyper-V ,CA Technologies - Virtualization & Automation,"The Microsoft Hyper-V® Connector for CA Process Automation makes integration with and orchestration of the Microsoft Hyper-V platform easy, straightforward, and quick so IT can manage at the speed of business their virtualized environments."
+Enabled,CA Process Automation Connector for VMware vSphere,CA Technologies - Virtualization & Automation,"The CA Vmware vSphere® Connector for CA Process Automation makes integration with and orchestration of the Vmware vSphere platform easy, straightforward, and quick so IT can manage at the speed of business their virtualized environments."
+Enabled,CA Process Automation Connector for CA Spectrum,CA Technologies - Virtualization & Automation,"CA Process Automation Connector for CA Spectrum ® makes integration with and orchestration of CA Spectrum ® easy, straightforward, and quick.  When CA Spectrum is integrated into automated IT processes, incidents can be automatically remediated saving time and improving SLAs.  Furthermore, incidents can be automatically enriched, change requirements satisfied more quickly, and data collection for problem management more consistently collected.  In short, IT becomes better while delivering and managing IT becomes easier and less costly."
+Enabled,Radix SharePoint Standard Edition Template - Coming Soon,Radix Technologies  SA T,"Radix SharePoint Standard Template with Active Directory. The Application still requires knowledge of SharePoint to start using and Administering SharePoint .<p><p>
+
+Customer must provide their own Microsoft SharePoint Standard License and Windows 2008 Standard Server License."
+Enabled,ScaleMatrix Private Cloud - 4 CPU Development Grid,ScaleMatrix,"<p>ScaleMatrix takes an infrastructure based approach to providing best-in-class cloud solutions to clients at every stage of their IT Lifecycle development.  By investing heavily in both facilities and personnel, and developing strategic relationships with critical hardware, software, and support service vendors – we are able to offer our clients industry leading solutions which include design, deployment, and ongoing management as part of our standard offering.</p>
+<p>﻿</p>"
+Enabled,"ScaleMatrix Private Cloud - 4 Server, 8 CPU",ScaleMatrix,"<p>ScaleMatrix takes an infrastructure based approach to providing best-in-class cloud solutions to clients at every stage of their IT Lifecycle development.  By investing heavily in both facilities and personnel, and developing strategic relationships with critical hardware, software, and support service vendors – we are able to offer our clients industry leading solutions which include design, deployment, and ongoing management as part of our standard offering.</p>"
+Enabled,"ScaleMatrix Private Cloud - 6 Server, 12 CPU",ScaleMatrix,"ScaleMatrix takes an infrastructure based approach to providing best-in-class cloud solutions to clients at every stage of their IT Lifecycle development.  By investing heavily in both facilities and personnel, and developing strategic relationships with critical hardware, software, and support service vendors – we are able to offer our clients industry leading solutions which include design, deployment, and ongoing management as part of our standard offering."
+Enabled,ScaleUp WORDPRESS Application,ScaleUp Cloud Technologies GmbH T,"This is a ready-to-use, scalable Web-Application for blog or website hosting with the famous WORDPRESS CMS software pre-installed."
+Enabled,VENE Project Resource Workload Management,Acolyst,"<p>Acolyst VENE Project Resource Workload Management application is for corporate and government professionals needing a tool to allow for collaboration, managing workload status and related activities and assets, sharing notes, documents, assigning tasks, creating appointments, scheduling alerts and notification, workflow and approvals, and so much more.</p>
+<p>The object model architecture provides ease of associating multiple items to a Project.; For example, Tasks, Appointments, Documents, Emails, and Contacts are associated to a project.</p>"
+Enabled,"VENE Requirement, Configuration and Setup Services",Acolyst,"DESCRIPTION: Configuration set up is where Acolyst works with the client’s designated team members to understand their goals, identify the requirements for the data fields that need to be modified or added, data that needs to be tracked, and the workflow needs.
+PREREQUISITES: 
+•	Client to fill out readiness survey 
+•	Client to provide contact information for their designated team members
+•	Client complete preparatory tasks
+"
+Enabled,Radix Exchange Standard Edition Template,Radix Technologies  SA T,<p>Radix Exchange Standard Template with Active Directory. The Application still requires knowledge of SharePoint to start using and Administering Exchange . Customer must provide their own Microsoft Exchange Standard License and Windows 2008 Standard Server License. AppLogic template enables user to quick create a functioning Exchange Cloud Appliance.</p>
+Enabled,"ScaleMatrix Private Cloud - 8 Server, 16 CPU",ScaleMatrix,"ScaleMatrix takes an infrastructure based approach to providing best-in-class cloud solutions to clients at every stage of their IT Lifecycle development.  By investing heavily in both facilities and personnel, and developing strategic relationships with critical hardware, software, and support service vendors – we are able to offer our clients industry leading solutions which include design, deployment, and ongoing management as part of our standard offering."
+Enabled,Radix Exchange Enterprise Edition Template,Radix Technologies  SA T,"Radix Exchange Standard Template with Active Directory. The Application still requires knowledge of SharePoint to start using and Administering Exchange .  
+
+Customer must provide their own Microsoft Exchange Standard License and Windows 2008 Standard Server License.
+
+AppLogic template enables user to quick create a functioning Exchange Cloud Appliance.
+"
+Enabled,Radix AppLogic SharePoint and Exchange Template Support,Radix Technologies  SA T,"Radix Exchange Standard Template with Active Directory. The Application still requires knowledge of SharePoint to start using and Administering Exchange .  
+
+Customer must provide their own Microsoft Exchange Standard License and Windows 2008 Standard Server License.
+
+AppLogic template enables user to quick create a functioning Exchange Cloud Appliance.
+"
+Enabled,CorePLUS Setup and Configuration Packaged Service,"CPW Group, Inc., dba CorePLUS T","<p>The process:</p>
+<p>1)      begins with a site assessment with the user community and local IT Team (if one exists),</p>
+<p>2)      training of the resident IT Team (if applicable) on the improved cloud environment management tools and capabilities,</p>
+<p>3)      training of the trainers, those that will train and be the initial help to the users as the transition occurs,</p>
+<p>4)      then execution of the plan to train and inform the user community on the new system,</p>
+<p>5)      followed by preparation of data and files to be moved to the new environment,</p>
+<p>the actual cut-over to the new system happens over night as departments, groups and individual users come in the next morning with their complete CoreDESK and related applications setup in the Cloud Environment, all accessed through an icon on their local system</p>
+<p> </p>
+<p>PREREQUISITES:       CorePlus MSOffice, Exchange and Adobe Reader PaaS</p>
+<p>DELIVERY METHOD(S): Remote Services</p>
+<p>ESTIMATED PERIOD OF PERFORMANCE: Estimated 1 weeks</p>"
+Enabled,Cloud Control Panel (CCP) 2.9,DNS Europe,"<p>Enhance the Cloud Service design, management and end-user control capabilities of your AppLogic infrastructure with our Cloud Control Panel (CCP) for CA AppLogic v2.9. Building and managing cloud infrastructure and applications is something that CA AppLogic excels at.</p>
+<p>Now, with our CCP app, any CA AppLogic deployment can benefit from extended end-user control of templated Cloud Services including automated provisioning, on-demand resource changes and access to consumed resource data history – all through a simple web-based UI.</p>
+<p>Working with any application template built on AppLogic, the CCP provides Service Designers with the control to decide exactly how a Cloud Service is experienced by the end-user, including what permissions they have to control each component of the application infrastructure.</p>
+<p>The CCP includes both Ordering & Metering API features to allow you to integrate with external service management and billing systems.</p>
+<p>Note: The CCP application uses a built-in Oracle XE database appliance that is limited to 4GB of database storage, 1 (physical) CPU & 1GB RAM. For alternative Oracle licensing options, including unlimited size Embedded Standard Edition One, please contact DNS Europe.</p>"
+Enabled,CentOS Source Repository,CA Technologies - AppLogic Appliances,This project contains the kits for CentOS used as the basis for Linux appliances in the AppLogic 3.0 System Catalog.
