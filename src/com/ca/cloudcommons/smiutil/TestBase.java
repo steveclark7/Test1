@@ -298,6 +298,42 @@ public abstract class TestBase {
 		return "";// getFirstLine(response);
 	}
 
+	Document getXmlResponse(String details) throws Exception {
+		// HttpGet http = new HttpGet("/Insight_API/xml/SMI/0.5/" + details);
+
+		List<NameValuePair> qparams = new ArrayList<NameValuePair>();
+		qparams.add(new BasicNameValuePair("key", ourProps.getUser()));
+		qparams.add(new BasicNameValuePair("secret", ourProps.getPassword()));
+
+		String encodedUri = URLEncodedUtils.format(qparams, "UTF-8");
+
+		URI uri = URIUtils.createURI("http", ourProps.getCloudSite(), -1, "/Insight_API/xml/SMI/0.5/" + details,
+				encodedUri, null);
+
+		HttpGet http = new HttpGet(uri);
+				
+		// http.setHeader(header)
+		// show("executing request: " + http.getRequestLine());
+
+		// List <NameValuePair> nvps = new ArrayList <NameValuePair>();
+		// nvps.add(new BasicNameValuePair("key", ourProps.getUser()));
+		// nvps.add(new BasicNameValuePair("secret", ourProps.getPassword()));
+
+		// http.addHeader("key", ourProps.getUser());
+		// http.addHeader("secret", ourProps.getPassword());
+
+		// http.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
+		HttpResponse response = execute(http);		
+
+		Document doc = getXmlFromResponse(response);
+		
+//		showResponse(response);
+
+		Assert.assertTrue("Returned status is not OK!", (200 == checkStatusCode(response)));
+		return doc;// getFirstLine(response);
+	}
+	
+	
 	HttpResponse execute(HttpRequestBase httpRequest) throws IOException, ClientProtocolException {
 		// String token = getToken();
 
@@ -340,6 +376,28 @@ public abstract class TestBase {
 		}
 	}
 
+	
+	void createProviderList(Document doc) {
+		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+		NodeList nList = doc.getElementsByTagName("result");
+		System.out.println("-----------------------");
+		
+		for (int temp = 0; temp < nList.getLength(); temp++) {
+
+			Node nNode = nList.item(temp);
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+				Element eElement = (Element) nNode;
+
+				System.out.println("returnCodee : " + getTagValue("uuid", eElement));
+				System.out.println("errorMessage : " + getTagValue("name", eElement));
+				System.out.println("errorReason : " + getTagValue("ResourceService-Bean", eElement));
+//				System.out.println("resultCount : " + getTagValue("resultCount", eElement));
+			}
+		}
+	}
+	
+	
 	private String getTagValue(String sTag, Element eElement) {
 		String retval = "";
 
@@ -363,7 +421,8 @@ public abstract class TestBase {
 	 * @param response
 	 * @throws Exception 
 	 */
-	void showXMLResponse(HttpResponse response) throws Exception {
+	Document getXmlFromResponse(HttpResponse response) throws Exception {
+		Document doc = null;
 		HttpEntity entity = response.getEntity();
 
 		show(response.getStatusLine().toString());
@@ -372,7 +431,7 @@ public abstract class TestBase {
 			// entity.getContentLength());
 			InputStream content = entity.getContent();
 
-			Document doc = getXMLDocument(content);
+			doc = getXMLDocument(content);
 			
 			showResultValues(doc);
 			
@@ -391,6 +450,8 @@ public abstract class TestBase {
 		// If you don't call this after a http execution you get connection
 		// errors.
 		EntityUtils.consume(entity);
+		
+		return doc;
 	}
 
 }

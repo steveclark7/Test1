@@ -5,9 +5,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
-import java.util.Arrays;
+
+import org.apache.log4j.Logger;
 
 public class ProductFileParser {
+
+	static Logger _log = Logger.getLogger(ProductFileParser.class);
 
 	public ProductFileParser() {
 	}
@@ -24,60 +27,90 @@ public class ProductFileParser {
 		BufferedReader in = new BufferedReader(new FileReader(fileName));
 		String line;
 
-		while ((line = in.readLine()) != null) {
-			if (line.contains("Connecting")) {
-				continue;
-			}
-			
+		HeaderPosition hp = null;
+
+		for (int i = 0; (line = in.readLine()) != null; i++) {
 			Pattern pat = Pattern.compile(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
 
 			String[] str = pat.split(line);
-			
-			getHeader(str);
 
-			break;
-//			if (str.length >= 2) {
-//				al.add(new NameIp(str[0], str[1]));
-//			}
+			// first line is header
+			if (i == 0) {
+				hp = getHeader(str);
+				// TODO validate header
+
+			} else {
+				if (str.length >= hp.getLength() ) {
+//					System.out.println("Name: " + str[hp.getProduct_name()]);
+
+					al.add( new NameIp(str[hp.getStatus()], str[hp.getProduct_name()], str[hp.getManufacturer()],
+							""/*str[hp.getDescription()]*/));
+
+					// System.out.println("Description: " + str[hp.getDescription()]);
+				}
+			}
 		}
 
 		in.close();
 
 		return al;
 	}
-	
-	void getHeader(String[] str){
-		
-		for (int i = 0; i < str.length; i++) {
-			String string = str[i];
-			
-			
+
+	HeaderPosition getHeader(String[] str) {
+
+		HeaderPosition hp = new HeaderPosition();
+
+		if (str.length <= 0) {
+			throw new IllegalArgumentException("CSV Header has no values");
 		}
+
+		// status,product_name,manufacturer,description
+		hp.setStatus(0);
+		hp.setProduct_name(1);
+		hp.setManufacturer(2);
+		hp.setDescription(3);
 		
-//		private ArrayList<String> csvToList(String csv) {
-		
+		if( str.length == 4 ){
+			hp.setLength(3); // TODO fudge for empty description, remove this 			
+		}
+		else{
+			hp.setLength(str.length);			
+		}
+			
+
+		// TODO
+		for (int i = 0; i < str.length; i++) {
+			String name = str[i];
+
+			if (name.equalsIgnoreCase(HeaderPosition.STATUS)) {
+
+			}
+
+		}
+
+		// private ArrayList<String> csvToList(String csv) {
+
+		return hp;
 	}
-	
-	int getHeaderPosition(String[] str, String header){
+
+	int getHeaderPosition(String[] str, String header) {
 		int retval = -1;
-		
+
 		for (int i = 0; i < str.length; i++) {
 			String string = str[i];
-			
-			if( string.equalsIgnoreCase(header)){
+
+			if (string.equalsIgnoreCase(header)) {
 				retval = i;
 				break;
-			}						
+			}
 		}
-				
+
 		return retval;
 	}
-	
-	
 
 	private ArrayList<String> csvToList(String csv) {
 		ArrayList<String> retval = new ArrayList<String>();
-		
+
 		if (csv.length() > 0) {
 			// regex matches csv string
 			Pattern pat = Pattern.compile(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
@@ -98,22 +131,89 @@ public class ProductFileParser {
 	 * @author Developer
 	 * 
 	 */
-	private class NameIp {
-		String name;
-		String ip;
+	class NameIp {
+		String status, product_name, manufacturer, description;
 
-		public NameIp(String name, String ip) {
-			this.name = name;
-			this.ip = ip;
+		public NameIp(String status, String product_name, String manufacturer, String description) {
+			super();
+			this.status = status;
+			this.product_name = product_name;
+			this.manufacturer = manufacturer;
+			this.description = description;
 		}
 
-		public String getName() {
-			return name;
+		public String getStatus() {
+			return status;
 		}
 
-		public String getIp() {
-			return ip;
+		public String getProduct_name() {
+			return product_name;
 		}
+
+		public String getManufacturer() {
+			return manufacturer;
+		}
+
+		public String getDescription() {
+			return description;
+		}
+
+	}
+
+	class HeaderPosition {
+		public static final String STATUS = "status";
+		public static final String PRODUCT_NAME = "product_name";
+		public static final String MANUFACTURER = "manufacturer";
+		public static final String DESCRIPTION = "description";
+
+		// the number of headers
+		private int length = 0;
+
+		private int status = -1;
+		private int product_name = -1;
+		private int manufacturer = -1;
+		private int description = -1;
+
+		public int getLength() {
+			return length;
+		}
+
+		public void setLength(int length) {
+			this.length = length;
+		}
+
+		public int getStatus() {
+			return status;
+		}
+
+		public void setStatus(int status) {
+			this.status = status;
+		}
+
+		public int getProduct_name() {
+			return product_name;
+		}
+
+		public void setProduct_name(int product_name) {
+			this.product_name = product_name;
+		}
+
+		public int getManufacturer() {
+			return manufacturer;
+		}
+
+		public void setManufacturer(int manufacturer) {
+			this.manufacturer = manufacturer;
+		}
+
+		public int getDescription() {
+			return description;
+		}
+
+		public void setDescription(int description) {
+			this.description = description;
+		}
+
 	}
 
 }

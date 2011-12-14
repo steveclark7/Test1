@@ -1,6 +1,7 @@
 package com.ca.cloudcommons.smiutil;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.http.HttpResponse;
@@ -12,6 +13,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.w3c.dom.Document;
+
+import com.ca.cloudcommons.smiutil.ProductFileParser.NameIp;
 
 public class TestRead extends TestBase {
 
@@ -35,7 +39,7 @@ public class TestRead extends TestBase {
 	}
 	
 	@Test
-	@Ignore	
+//	@Ignore	
 	public void listService() throws Exception {
 		// https://smi.cloudcommons.com:8443/Insight_API/json/SMI/0.5/service/create?
 		// providerUUID=50fc741c-5447-11df-a06a-c7daeae07f53&name=TestService&desc=testservice
@@ -57,11 +61,18 @@ public class TestRead extends TestBase {
 	}
 
 	@Test
+	@Ignore
 	public void parseInputFile() throws Exception {
 		ProductFileParser pp = new ProductFileParser();
 		
-		pp.parseFile("export_all_products-filtered-test1.csv");
+//		pp.parseFile("export_all_products-filtered-test1.csv");
+		ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-NoDesc.csv");
+//		ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-empty-desc.csv");
 		
+		
+		for (NameIp nameIp : magentoList) {
+			System.out.println("Status: " + nameIp.getStatus() + " Name: " + nameIp.getProduct_name());			
+		}						
 	}
 	
 
@@ -86,11 +97,19 @@ public class TestRead extends TestBase {
 	}
 
 	@Test
-	@Ignore
 	public void listProviders() throws Exception {
-		listAllItems1("providers");				
+//		listAllItems1("providers");
+		
+		listAllItems1("providers");	
+		
+		Document doc = getXmlResponse("providers");
+		
+		createProviderList(doc);
+		
+		
 		
 	}
+	
 	
 	
 	
