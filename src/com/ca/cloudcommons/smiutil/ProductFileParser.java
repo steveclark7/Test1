@@ -22,8 +22,8 @@ public class ProductFileParser {
 	 * @return
 	 * @throws IOException
 	 */
-	ArrayList<NameIp> parseFile(String fileName) throws IOException {
-		ArrayList<NameIp> al = new ArrayList<NameIp>();
+	ArrayList<ProductData> parseFile(String fileName) throws IOException {
+		ArrayList<ProductData> al = new ArrayList<ProductData>();
 		BufferedReader in = new BufferedReader(new FileReader(fileName));
 		String line;
 
@@ -44,7 +44,7 @@ public class ProductFileParser {
 //					System.out.println("Name: " + str[hp.getProduct_name()]);
 
 //					stripQuotes
-					NameIp values = new NameIp();					
+					ProductData values = new ProductData();					
 					values.setStatus(str[hp.getStatus()]);
 					values.setProduct_name(stripQuotes(str[hp.getProduct_name()]));
 					values.setManufacturer(stripQuotes(str[hp.getManufacturer()]));
@@ -149,10 +149,10 @@ public class ProductFileParser {
 	 * @author Developer
 	 * 
 	 */
-	class NameIp {
-		String status, product_name, manufacturer, description;
+	class ProductData {
+		private String status, product_name, manufacturer, description;
 
-		public NameIp(){
+		public ProductData(){
 		}
 
 		public String getStatus() {

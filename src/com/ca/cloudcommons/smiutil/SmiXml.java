@@ -17,7 +17,7 @@ public class SmiXml {
 	public SmiXml() {
 	}
 
-	void loadProviderList(Document doc) {		
+	void loadProviderList(Document doc) {
 		_log.debug("Root element :" + doc.getDocumentElement().getNodeName());
 		NodeList nList = doc.getElementsByTagName("result");
 
@@ -39,23 +39,15 @@ public class SmiXml {
 			}
 		}
 	}
-	
-/*		
-		<ResourceService-Bean>
-			<uuid>b3ac7485-bd7c-0e23-e040-13ac0d6e2968</uuid>
-			<name>SJC_TestService</name>
-			<description>SJC_TestService description</description>
-			<provider>CA Technologies, Inc.</provider>
-			<providerUUID>ae89bb71-b8d2-0c0b-e040-13ac0d6e2518</providerUUID>
-			<categoryName>null</categoryName>
-			<naturalScore>null</naturalScore>
-			<group>null</group>
-			<label>null</label>
-			<createdOn>2011-12-09 10:41:22.0</createdOn>
-			<needsApproval>Yes</needsApproval>
-			<createdBy>CCPublicUser@ca.com</createdBy>
-		</ResourceService-Bean>		
-*/	
+
+	/*
+	 * <ResourceService-Bean> <uuid>b3ac7485-bd7c-0e23-e040-13ac0d6e2968</uuid> <name>SJC_TestService</name>
+	 * <description>SJC_TestService description</description> <provider>CA Technologies, Inc.</provider>
+	 * <providerUUID>ae89bb71-b8d2-0c0b-e040-13ac0d6e2518</providerUUID> <categoryName>null</categoryName>
+	 * <naturalScore>null</naturalScore> <group>null</group> <label>null</label> <createdOn>2011-12-09
+	 * 10:41:22.0</createdOn> <needsApproval>Yes</needsApproval> <createdBy>CCPublicUser@ca.com</createdBy>
+	 * </ResourceService-Bean>
+	 */
 	ArrayList<ServiceInfo> getServicesList(Document doc) {
 		ArrayList<ServiceInfo> al = new ArrayList<ServiceInfo>();
 
@@ -83,12 +75,20 @@ public class SmiXml {
 		return al;
 	}
 
-	
-	
+	boolean findService(ArrayList<ServiceInfo> sl, String name) {
+		for (ServiceInfo serviceInfo : sl) {
+			if (serviceInfo.getName().equalsIgnoreCase(name)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 	ProviderInfo getProvider(String name) throws Exception {
 		ProviderInfo retval = null;
 
-		for (ProviderInfo providerInfo : providers) {			
+		for (ProviderInfo providerInfo : providers) {
 			if (providerInfo.getName().equalsIgnoreCase(name)) {
 				retval = providerInfo;
 				break;
@@ -196,5 +196,5 @@ public class SmiXml {
 		}
 
 	}
-	
+
 }

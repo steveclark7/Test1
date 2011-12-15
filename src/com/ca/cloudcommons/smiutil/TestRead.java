@@ -10,6 +10,8 @@ import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -19,7 +21,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.w3c.dom.Document;
 
-import com.ca.cloudcommons.smiutil.ProductFileParser.NameIp;
+import com.ca.cloudcommons.smiutil.ProductFileParser.ProductData;
 import com.ca.cloudcommons.smiutil.SmiXml.ProviderInfo;
 import com.ca.cloudcommons.smiutil.SmiXml.ServiceInfo;
 
@@ -123,10 +125,10 @@ public class TestRead extends TestBase {
 		ProductFileParser pp = new ProductFileParser();
 
 		// pp.parseFile("export_all_products-filtered-test1.csv");
-		ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-NoDesc.csv");
+		ArrayList<ProductData> magentoList = pp.parseFile("wilma-export_all_products-filtered-NoDesc.csv");
 		// ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-empty-desc.csv");
 
-		for (NameIp nameIp : magentoList) {
+		for (ProductData nameIp : magentoList) {
 			_log.info("Status: " + nameIp.getStatus() + " Name: " + nameIp.getProduct_name());
 		}
 	}
@@ -144,11 +146,76 @@ public class TestRead extends TestBase {
 		// &key=ae5b26097e666ceadd6f851c8a5abbcd&secret=8af0b36d77aece511f661facfecf89ef
 
 		// listAllItems1("categories");
-		// listAllItems1("providers");
+		listAllItems1("providers");
 
-		listAllItems1("services");
+//		listAllItems1("services");
 
 		// listAllItems1("surveys");
+	}
+
+	void createService(ProviderInfo pi, ProductData nameIp) throws Exception {
+
+		HttpConnector smi = getHttpSmi();
+		List<NameValuePair> qparams = smi.getAuthenticationList();
+
+		List<NameValuePair> payload = new ArrayList<NameValuePair>();
+		payload.add(new BasicNameValuePair("providerUUID", pi.getUuid()));
+		payload.add(new BasicNameValuePair("name", nameIp.getProduct_name()));
+		payload.add(new BasicNameValuePair("desc", nameIp.getDescription()));
+		payload.addAll(qparams);
+
+		// show(uuid);
+
+		URI uri = smi.getURI("/Insight_API/xml/SMI/0.5/service/create", payload);
+		HttpPost http = new HttpPost(uri);
+
+		show("executing request: " + http.getRequestLine());
+		HttpResponse response = smi.execute(http);
+
+		showResponse(response);
+
+	}
+
+	@Test
+	@Ignore
+	public void listServices() throws Exception {
+		// listAllItems1("providers");
+		SmiXml smiXml = new SmiXml();
+		Document doc = getXmlResponse("providers");
+		smiXml.loadProviderList(doc);
+
+		ProductFileParser pp = new ProductFileParser();
+
+		// pp.parseFile("export_all_products-filtered-test1.csv");
+		// ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-NoDesc.csv");
+		// ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-empty-desc.csv");
+		ArrayList<ProductData> magentoList = pp.parseFile("betty-export_all_products-filtered.csv");
+
+		for (ProductData csvData : magentoList) {
+			_log.info("Services for provider: " + csvData.getManufacturer());
+
+			if (csvData.getStatus().equalsIgnoreCase("Enabled")) {
+				ProviderInfo pi = smiXml.getProvider(csvData.getManufacturer());
+
+				if (pi != null) {
+					doc = getXmlResponse("provider/" + pi.getUuid() + "/service");
+					String dom = Util.printDom(doc);
+
+					_log.debug(dom);
+
+					ArrayList<ServiceInfo> sl = smiXml.getServicesList(doc);
+
+					for (ServiceInfo serviceInfo : sl) {
+						_log.info("  Service: " + serviceInfo.getName() + " for: " + csvData.getManufacturer());
+					}
+				} else {
+					_log.info("Provider not found in SMI: " + csvData.getManufacturer());
+				}
+			} else {
+				_log.info("Disabled Provider: " + csvData.getManufacturer());
+			}
+		}
+
 	}
 
 	@Test
@@ -163,14 +230,14 @@ public class TestRead extends TestBase {
 		// pp.parseFile("export_all_products-filtered-test1.csv");
 		// ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-NoDesc.csv");
 		// ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-empty-desc.csv");
-		ArrayList<NameIp> magentoList = pp.parseFile("betty-export_all_products-filtered.csv");
+		ArrayList<ProductData> magentoList = pp.parseFile("betty-export_all_products-filtered.csv");
 
-		for (NameIp nameIp : magentoList) {
-			_log.info("From CSV- Status: " + nameIp.getStatus() + " provider: " + nameIp.getManufacturer()
-					+ " product: " + nameIp.getProduct_name());
+		for (ProductData csvData : magentoList) {
+			_log.info("From CSV- Status: " + csvData.getStatus() + " provider: " + csvData.getManufacturer()
+					+ " product: " + csvData.getProduct_name());
 
-			if (nameIp.getStatus().equalsIgnoreCase("Enabled")) {
-				ProviderInfo pi = smiXml.getProvider(nameIp.getManufacturer());
+			if (csvData.getStatus().equalsIgnoreCase("Enabled")) {
+				ProviderInfo pi = smiXml.getProvider(csvData.getManufacturer());
 
 				if (pi != null) {
 					// getServices(pi.getUuid());
@@ -182,18 +249,23 @@ public class TestRead extends TestBase {
 
 					ArrayList<ServiceInfo> sl = smiXml.getServicesList(doc);
 
-					_log.info("searching for: " + nameIp.getProduct_name());
+					_log.info("searching for: " + csvData.getProduct_name());
 
-					for (ServiceInfo serviceInfo : sl) {
-						if (serviceInfo.getName().equalsIgnoreCase(nameIp.getProduct_name())) {
-							_log.info("FOUND service in XML: " + nameIp.getProduct_name());
-						} else {
-							_log.info("Now create service: " + nameIp.getProduct_name() + " for: "
-									+ nameIp.getManufacturer());
-						}
+					if (smiXml.findService(sl, csvData.getProduct_name())) {
+						_log.info("FOUND service in XML: " + csvData.getProduct_name());
+					} else {
+						_log.info("Now create service: " + csvData.getProduct_name() + " for: "
+								+ csvData.getManufacturer());
+						createService(pi, csvData);
 					}
+
+				} else {
+					_log.info("Provider not found in SMI: " + csvData.getManufacturer());
 				}
+			} else {
+				_log.info("Disabled Provider: " + csvData.getManufacturer());
 			}
+
 		}
 
 	}
