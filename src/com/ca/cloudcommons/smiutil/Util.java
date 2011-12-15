@@ -95,7 +95,7 @@ public class Util {
 		return doc;
 	}
 
-	public String printDom(Document document) throws TransformerException {
+	public static String printDom(Document document) throws TransformerException {
 
 		String str = "";
 

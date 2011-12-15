@@ -100,11 +100,8 @@ public abstract class TestBase {
 	}
 
 	void show(String info) {
-		// TODO logging
 
-		if (ourProps.getDebugLevel() > 0) {
-			_log.info(info);
-		}
+		_log.debug(info);
 	}
 
 	void showAlways(String info) {
@@ -401,7 +398,7 @@ public abstract class TestBase {
 
 			doc = getXMLDocument(content);
 
-			showResultValues(doc);
+//			showResultValues(doc);
 
 			// BufferedReader in = new BufferedReader(new
 			// InputStreamReader(content));

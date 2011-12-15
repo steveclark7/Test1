@@ -21,11 +21,12 @@ import org.w3c.dom.Document;
 
 import com.ca.cloudcommons.smiutil.ProductFileParser.NameIp;
 import com.ca.cloudcommons.smiutil.SmiXml.ProviderInfo;
+import com.ca.cloudcommons.smiutil.SmiXml.ServiceInfo;
 
 public class TestRead extends TestBase {
 
 	static Logger _log = Logger.getLogger(TestRead.class);
-	
+
 	@BeforeClass
 	public static void init() throws Exception {
 		showStatic("Starting: " + TestRead.class);
@@ -143,7 +144,7 @@ public class TestRead extends TestBase {
 		// &key=ae5b26097e666ceadd6f851c8a5abbcd&secret=8af0b36d77aece511f661facfecf89ef
 
 		// listAllItems1("categories");
-//		 listAllItems1("providers");
+		// listAllItems1("providers");
 
 		listAllItems1("services");
 
@@ -152,7 +153,7 @@ public class TestRead extends TestBase {
 
 	@Test
 	public void listProviders() throws Exception {
-		//listAllItems1("providers");
+		// listAllItems1("providers");
 		SmiXml smiXml = new SmiXml();
 		Document doc = getXmlResponse("providers");
 		smiXml.loadProviderList(doc);
@@ -161,15 +162,37 @@ public class TestRead extends TestBase {
 
 		// pp.parseFile("export_all_products-filtered-test1.csv");
 		// ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-NoDesc.csv");
-		ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-empty-desc.csv");
+		// ArrayList<NameIp> magentoList = pp.parseFile("wilma-export_all_products-filtered-empty-desc.csv");
+		ArrayList<NameIp> magentoList = pp.parseFile("betty-export_all_products-filtered.csv");
 
 		for (NameIp nameIp : magentoList) {
-			_log.info("Status: " + nameIp.getStatus() + " provider: " + nameIp.getManufacturer()
+			_log.info("From CSV- Status: " + nameIp.getStatus() + " provider: " + nameIp.getManufacturer()
 					+ " product: " + nameIp.getProduct_name());
-			ProviderInfo pi = smiXml.getProvider(nameIp.getManufacturer());
 
-			if (pi != null) {
-				getServices(pi.getUuid());
+			if (nameIp.getStatus().equalsIgnoreCase("Enabled")) {
+				ProviderInfo pi = smiXml.getProvider(nameIp.getManufacturer());
+
+				if (pi != null) {
+					// getServices(pi.getUuid());
+
+					doc = getXmlResponse("provider/" + pi.getUuid() + "/service");
+					String dom = Util.printDom(doc);
+
+					_log.debug(dom);
+
+					ArrayList<ServiceInfo> sl = smiXml.getServicesList(doc);
+
+					_log.info("searching for: " + nameIp.getProduct_name());
+
+					for (ServiceInfo serviceInfo : sl) {
+						if (serviceInfo.getName().equalsIgnoreCase(nameIp.getProduct_name())) {
+							_log.info("FOUND service in XML: " + nameIp.getProduct_name());
+						} else {
+							_log.info("Now create service: " + nameIp.getProduct_name() + " for: "
+									+ nameIp.getManufacturer());
+						}
+					}
+				}
 			}
 		}
 

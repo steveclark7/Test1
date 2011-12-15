@@ -17,20 +17,14 @@ public class SmiXml {
 	public SmiXml() {
 	}
 
-	void loadProviderList(Document doc) {
-		providers = createProviderList(doc);
-	}
-
-	ArrayList<ProviderInfo> createProviderList(Document doc) {
-		ArrayList<ProviderInfo> al = new ArrayList<ProviderInfo>();
-
-		_log.info("Root element :" + doc.getDocumentElement().getNodeName());
+	void loadProviderList(Document doc) {		
+		_log.debug("Root element :" + doc.getDocumentElement().getNodeName());
 		NodeList nList = doc.getElementsByTagName("result");
 
 		nList = getElements(nList, "Bean-List");
 		nList = getElements(nList, "ResourceProvider-Bean");
 
-		_log.info("-----------------------");
+		_log.debug("-----------------------");
 
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 
@@ -39,20 +33,62 @@ public class SmiXml {
 
 				Element eElement = (Element) nNode;
 
-				_log.info("provider : " + getTagValue("name", eElement) + " uuid : " + getTagValue("uuid", eElement));
+				_log.debug("provider : " + getTagValue("name", eElement) + " uuid : " + getTagValue("uuid", eElement));
 				// System.out.println("");
-				al.add(new ProviderInfo(getTagValue("name", eElement), getTagValue("uuid", eElement), ""));
+				providers.add(new ProviderInfo(getTagValue("name", eElement), getTagValue("uuid", eElement), ""));
+			}
+		}
+	}
+	
+/*		
+		<ResourceService-Bean>
+			<uuid>b3ac7485-bd7c-0e23-e040-13ac0d6e2968</uuid>
+			<name>SJC_TestService</name>
+			<description>SJC_TestService description</description>
+			<provider>CA Technologies, Inc.</provider>
+			<providerUUID>ae89bb71-b8d2-0c0b-e040-13ac0d6e2518</providerUUID>
+			<categoryName>null</categoryName>
+			<naturalScore>null</naturalScore>
+			<group>null</group>
+			<label>null</label>
+			<createdOn>2011-12-09 10:41:22.0</createdOn>
+			<needsApproval>Yes</needsApproval>
+			<createdBy>CCPublicUser@ca.com</createdBy>
+		</ResourceService-Bean>		
+*/	
+	ArrayList<ServiceInfo> getServicesList(Document doc) {
+		ArrayList<ServiceInfo> al = new ArrayList<ServiceInfo>();
+
+		_log.debug("Root element :" + doc.getDocumentElement().getNodeName());
+		NodeList nList = doc.getElementsByTagName("result");
+
+		nList = getElements(nList, "Bean-List");
+		nList = getElements(nList, "ResourceService-Bean");
+
+		_log.debug("-----------------------");
+
+		for (int temp = 0; temp < nList.getLength(); temp++) {
+
+			Node nNode = nList.item(temp);
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+				Element eElement = (Element) nNode;
+
+				_log.debug("Service : " + getTagValue("name", eElement) + " uuid : " + getTagValue("uuid", eElement));
+				// System.out.println("");
+				al.add(new ServiceInfo(getTagValue("name", eElement), getTagValue("uuid", eElement), ""));
 			}
 		}
 
 		return al;
 	}
 
+	
+	
 	ProviderInfo getProvider(String name) throws Exception {
 		ProviderInfo retval = null;
 
-		for (ProviderInfo providerInfo : providers) {
-
+		for (ProviderInfo providerInfo : providers) {			
 			if (providerInfo.getName().equalsIgnoreCase(name)) {
 				retval = providerInfo;
 				break;
@@ -125,4 +161,40 @@ public class SmiXml {
 
 	}
 
+	public class ServiceInfo {
+		private String name, uuid, description;
+
+		public ServiceInfo(String name, String uuid, String description) {
+			super();
+			this.name = name;
+			this.uuid = uuid;
+			this.description = description;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getUuid() {
+			return uuid;
+		}
+
+		public void setUuid(String uuid) {
+			this.uuid = uuid;
+		}
+
+		public String getDescription() {
+			return description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+	}
+	
 }

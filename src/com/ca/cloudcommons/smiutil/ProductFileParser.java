@@ -43,8 +43,14 @@ public class ProductFileParser {
 				if (str.length >= hp.getLength() ) {
 //					System.out.println("Name: " + str[hp.getProduct_name()]);
 
-					al.add( new NameIp(str[hp.getStatus()], str[hp.getProduct_name()], str[hp.getManufacturer()],
-							""/*str[hp.getDescription()]*/));
+//					stripQuotes
+					NameIp values = new NameIp();					
+					values.setStatus(str[hp.getStatus()]);
+					values.setProduct_name(stripQuotes(str[hp.getProduct_name()]));
+					values.setManufacturer(stripQuotes(str[hp.getManufacturer()]));
+					values.setDescription(stripQuotes(""));
+					
+					al.add( values );
 
 					// System.out.println("Description: " + str[hp.getDescription()]);
 				}
@@ -92,6 +98,18 @@ public class ProductFileParser {
 
 		return hp;
 	}
+	
+	private String stripQuotes(String element){
+		String retval = element;
+		
+		if (element.length() > 2) {
+			if (element.startsWith("\"") && element.endsWith("\"")) {
+				retval = element.substring(1, element.length() - 1);
+			}
+		}
+		
+		return retval;
+	}
 
 	int getHeaderPosition(String[] str, String header) {
 		int retval = -1;
@@ -134,28 +152,42 @@ public class ProductFileParser {
 	class NameIp {
 		String status, product_name, manufacturer, description;
 
-		public NameIp(String status, String product_name, String manufacturer, String description) {
-			this.status = status;
-			this.product_name = product_name;
-			this.manufacturer = manufacturer;
-			this.description = description;
+		public NameIp(){
 		}
 
 		public String getStatus() {
 			return status;
 		}
 
+		public void setStatus(String status) {
+			this.status = status;
+		}
+
 		public String getProduct_name() {
 			return product_name;
+		}
+
+		public void setProduct_name(String product_name) {
+			this.product_name = product_name;
 		}
 
 		public String getManufacturer() {
 			return manufacturer;
 		}
 
+		public void setManufacturer(String manufacturer) {
+			this.manufacturer = manufacturer;
+		}
+
 		public String getDescription() {
 			return description;
 		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		
 
 	}
 
